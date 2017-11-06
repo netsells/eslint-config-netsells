@@ -66,9 +66,14 @@ module.exports = {
             'vue/no-side-effects-in-computed-properties': [_THROW.WARNING, true],
             // When duplicate arguments exist, only the last one is valid
             'vue/no-duplicate-attributes': [_THROW.ERROR],
+            // Enforce that a return statement is present in computed property
             'vue/return-in-computed-property': [_THROW.ERROR, {
-                'treatUndefinedAsUnspecified': true,
+                treatUndefinedAsUnspecified: true,
             }],
+            // Disallow unused variable definitions of v-for directives or scope attributes
+            'vue/no-unused-vars': [_THROW.ERROR],
+            // When using the data property on a component (i.e. anywhere except on new Vue), the value must be a function that returns an object.
+            'vue/no-shared-component-data': [_THROW.ERROR],
         }],
     },
 }
