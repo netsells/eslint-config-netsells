@@ -10,7 +10,7 @@ Add the config to your project dependencies:
 yarn add netsells/eslint-config-netsells eslint@^4.10.0
 ```
 
-Extend the config in your project. For example, a .babelrc file in your project root:
+Extend the config in your project. For example, a `.eslintrc` file in your project root:
 
 ```json
 {
