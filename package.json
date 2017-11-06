@@ -1,0 +1,15 @@
+{
+  "name": "eslint-config-netsells",
+  "version": "1.0.0",
+  "description": "Eslint config for the Netsells organisation",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sam Turrell <sam@samturrell.co.uk> (http://samturrell.co.uk)",
+  "license": "ISC",
+  "dependencies": {
+    "eslint": "^4.10.0",
+    "eslint-plugin-vue": "^3.13.1"
+  }
+}
