@@ -4,8 +4,18 @@ This repository contains the defacto-standard eslint configuration used on all N
 
 ## Usage
 
+Add the config to your project dependencies:
+
 ```bash
 yarn add netsells/eslint-config-netsells eslint@^4.10.0
+```
+
+Extend the config in your project. For example, a .babelrc file in your project root:
+
+```json
+{
+  "extends": "netsells"
+}
 ```
 
 ### With webpack
