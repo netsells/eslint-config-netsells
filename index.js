@@ -1,5 +1,3 @@
-const _THROW = require('./modules/throwables');
-
 module.exports = {
     extends: [
         './rules/vue',
