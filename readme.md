@@ -90,6 +90,45 @@ let array = [
 ];
 ```
 
+---
+
+#### 📍 require-jsdoc
+Requires JSDoc definitions for all functions and classes.
+
+##### ❌ Example of incorrect code for this rule:
+
+```js
+methods: {
+    updateUser (id, data) {
+        return fetch(`/users/${id}`, {
+            method: 'POST',
+            body: JSON.stringify(opts),
+        });
+    },
+}
+```
+
+##### ✅ Example of correct code for this rule:
+
+```js
+methods: {
+    /**
+     * Update the user with the given id via the API
+     *
+     * @param {Number} id - id of user
+     * @param {Object} id - userdata object
+     *
+     * @returns {Promise} 
+     */
+    updateUser (id, data) {
+        return fetch(`/users/${id}`, {
+            method: 'POST',
+            body: JSON.stringify(opts),
+        });
+    },
+}
+```
+
 ### Vue
 
 ---
