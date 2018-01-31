@@ -47,7 +47,7 @@ Add the loader into your workflow. The following example will force the linter t
 
 ### Vue
 
-#### this-in-template
+#### 📍 this-in-template
 
 `@throws Error`
 
@@ -69,7 +69,7 @@ Disallow referencing `this` within a template.
 </template>
 ```
 
-#### order-in-components
+#### 📍 order-in-components
 
 `@throws Error`
 
@@ -112,7 +112,7 @@ export default {
 };
 ```
 
-#### html-indent
+#### 📍 html-indent
 
 `@throws Error`
 
@@ -144,7 +144,7 @@ Enforce a consistent continuous indent of 4 spaces for both tags and tag attribu
 </template>
 ```
 
-#### attribute-hyphenation
+#### 📍 attribute-hyphenation
 
 `@throws Error`
 
@@ -162,7 +162,7 @@ Force attributes to be hyphenated rather than camelCase.
 <my-component :custom-attribute="true"></my-component>
 ```
 
-#### no-dupe-keys
+#### 📍 no-dupe-keys
 
 `@throws Error`
 
@@ -192,7 +192,7 @@ export default {
 }
 ```
 
-#### v-on-style
+#### 📍 v-on-style
 
 `@throws Error`
 
@@ -210,7 +210,7 @@ Force the shorthand syntax for event binding.
 <my-component @change="updateValue"></my-component>
 ```
 
-#### v-bind-style
+#### 📍 v-bind-style
 
 `@throws Error`
 
@@ -228,7 +228,7 @@ Force the shorthand syntax for the v-bind directive.
 <my-component :foo="bar"></my-component>
 ```
 
-#### no-multi-spaces
+#### 📍 no-multi-spaces
 
 `@throws Error`
 
@@ -250,7 +250,7 @@ Remove multiple spaces in a row between attributes which are not used for indent
 />
 ```
 
-#### name-property-casing
+#### 📍 name-property-casing
 
 `@throws Error`
 
@@ -272,7 +272,7 @@ export default {
 }
 ```
 
-#### mustache-interpolation-spacing
+#### 📍 mustache-interpolation-spacing
 
 `@throws Error`
 
@@ -291,7 +291,7 @@ Enforce a single space around values in mustache echo statements.
 <div>{{ foo }}</div>
 ```
 
-#### html-quotes
+#### 📍 html-quotes
 
 `@throws Error`
 
@@ -310,7 +310,7 @@ Enforce a double quotes on tag attributes.
 <div class="foo"></div>
 ```
 
-#### max-attributes-per-line
+#### 📍 max-attributes-per-line
 
 `@throws Error`
 
@@ -339,7 +339,7 @@ Limit the max number of attributes per line. Single line tags can have a maximum
 ></my-component>
 ```
 
-#### require-default-prop
+#### 📍 require-default-prop
 
 `@throws Warning`
 
@@ -381,7 +381,7 @@ props: {
 }
 ```
 
-#### require-prop-types
+#### 📍 require-prop-types
 
 `@throws Warning`
 
@@ -407,7 +407,7 @@ props: {
 }
 ```
 
-#### no-side-effects-in-computed-properties
+#### 📍 no-side-effects-in-computed-properties
 
 `@throws Warning`
 
@@ -442,7 +442,7 @@ computed: {
 }
 ```
 
-#### no-duplicate-attributes
+#### 📍 no-duplicate-attributes
 
 `@throws Error`
 
@@ -467,7 +467,7 @@ When duplicate attributes exist, only the last one is used. Disallow duplicates 
 ></my-component>
 ```
 
-#### return-in-computed-property
+#### 📍 return-in-computed-property
 
 `@throws Error`
 
@@ -493,7 +493,7 @@ computed: {
 }
 ```
 
-#### no-unused-vars
+#### 📍 no-unused-vars
 
 `@throws Error`
 
@@ -519,7 +519,7 @@ Make sure scope variables are used.
 </template>
 ```
 
-#### no-shared-component-data
+#### 📍 no-shared-component-data
 
 `@throws Error`
 
