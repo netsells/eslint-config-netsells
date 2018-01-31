@@ -1,5 +1,6 @@
 module.exports = {
     extends: [
+        './rules/javascript',
         './rules/vue',
     ].map(require.resolve),
     parserOptions: { 
