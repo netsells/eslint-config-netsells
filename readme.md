@@ -47,6 +47,8 @@ Add the loader into your workflow. The following example will force the linter t
 
 ### Vue
 
+---
+
 #### 📍 this-in-template
 
 `@throws Error`
@@ -68,6 +70,8 @@ Disallow referencing `this` within a template.
     <div>{{ foo }}</div>
 </template>
 ```
+
+---
 
 #### 📍 order-in-components
 
@@ -112,6 +116,8 @@ export default {
 };
 ```
 
+---
+
 #### 📍 html-indent
 
 `@throws Error`
@@ -144,6 +150,8 @@ Enforce a consistent continuous indent of 4 spaces for both tags and tag attribu
 </template>
 ```
 
+---
+
 #### 📍 attribute-hyphenation
 
 `@throws Error`
@@ -161,6 +169,8 @@ Force attributes to be hyphenated rather than camelCase.
 ```vue
 <my-component :custom-attribute="true"></my-component>
 ```
+
+---
 
 #### 📍 no-dupe-keys
 
@@ -192,6 +202,8 @@ export default {
 }
 ```
 
+---
+
 #### 📍 v-on-style
 
 `@throws Error`
@@ -210,6 +222,8 @@ Force the shorthand syntax for event binding.
 <my-component @change="updateValue"></my-component>
 ```
 
+---
+
 #### 📍 v-bind-style
 
 `@throws Error`
@@ -227,6 +241,8 @@ Force the shorthand syntax for the v-bind directive.
 ```vue
 <my-component :foo="bar"></my-component>
 ```
+
+---
 
 #### 📍 no-multi-spaces
 
@@ -250,6 +266,8 @@ Remove multiple spaces in a row between attributes which are not used for indent
 />
 ```
 
+---
+
 #### 📍 name-property-casing
 
 `@throws Error`
@@ -272,6 +290,8 @@ export default {
 }
 ```
 
+---
+
 #### 📍 mustache-interpolation-spacing
 
 `@throws Error`
@@ -291,6 +311,8 @@ Enforce a single space around values in mustache echo statements.
 <div>{{ foo }}</div>
 ```
 
+---
+
 #### 📍 html-quotes
 
 `@throws Error`
@@ -309,6 +331,8 @@ Enforce a double quotes on tag attributes.
 ```html
 <div class="foo"></div>
 ```
+
+---
 
 #### 📍 max-attributes-per-line
 
@@ -338,6 +362,8 @@ Limit the max number of attributes per line. Single line tags can have a maximum
     xyz="321"
 ></my-component>
 ```
+
+---
 
 #### 📍 require-default-prop
 
@@ -381,6 +407,8 @@ props: {
 }
 ```
 
+---
+
 #### 📍 require-prop-types
 
 `@throws Warning`
@@ -406,6 +434,8 @@ props: {
     },
 }
 ```
+
+---
 
 #### 📍 no-side-effects-in-computed-properties
 
@@ -442,6 +472,8 @@ computed: {
 }
 ```
 
+---
+
 #### 📍 no-duplicate-attributes
 
 `@throws Error`
@@ -466,6 +498,8 @@ When duplicate attributes exist, only the last one is used. Disallow duplicates 
     abc="xyz"
 ></my-component>
 ```
+
+---
 
 #### 📍 return-in-computed-property
 
@@ -493,6 +527,8 @@ computed: {
 }
 ```
 
+---
+
 #### 📍 no-unused-vars
 
 `@throws Error`
@@ -518,6 +554,8 @@ Make sure scope variables are used.
     </ol>
 </template>
 ```
+
+---
 
 #### 📍 no-shared-component-data
 
