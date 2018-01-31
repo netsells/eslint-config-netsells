@@ -45,6 +45,51 @@ Add the loader into your workflow. The following example will force the linter t
 
 ## Rules
 
+### JavaScript
+
+---
+
+#### 📍 comma-dangle
+Requires trailing commas when the last element or property is in a different line than the closing `]` or `}` and disallows trailing commas when the last element or property is on the same line as the closing `]` or `}`. This makes git diffs a lot cleaner with single line changes rather than two.
+
+##### ❌ Example of incorrect code for this rule:
+
+```js
+let object = { a: 'b', c: 'd', };
+
+let object = { 
+    a: 'b', 
+    c: 'd'
+};
+
+let array = ['a', 'b', 'c',];
+
+let array = [
+    'a', 
+    'b', 
+    'c'
+];
+```
+
+##### ✅ Example of correct code for this rule:
+
+```js
+let object = { a: 'b', c: 'd' };
+
+let object = { 
+    a: 'b', 
+    c: 'd',
+};
+
+let array = ['a', 'b', 'c'];
+
+let array = [
+    'a', 
+    'b', 
+    'c',
+];
+```
+
 ### Vue
 
 ---
