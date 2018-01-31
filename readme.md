@@ -172,23 +172,23 @@ Error on duplicate keys to avoid conflicting and overwriting of values.
 
 ```js
 export default {
-  props: {
-    foo: String
-  },
+    props: {
+        foo: String,
+    },
 
-  computed: {
-    foo: {
-      get () {}
-    }
-  },
+    computed: {
+        foo: {
+            get () {}
+        },
+    },
 
-  data: {
-    foo: null
-  },
+    data: {
+        foo: null,
+    },
 
-  methods: {
-    foo () {}
-  }
+    methods: {
+        foo () {},
+    },
 }
 ```
 
@@ -421,6 +421,7 @@ computed: {
         this.firstName = 'lorem'; // <- side effect
         return `${this.firstName} ${this.lastName}`;
     },
+
     reversedArray () {
         return this.array.reverse(); // <- side effect
     },
