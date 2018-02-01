@@ -30,14 +30,14 @@ module.exports = {
             ],
             // Enforce 4 space continuous indentation
             'vue/html-indent': [_THROW.ERROR, 4, {
-                'attribute': 1,
-                'closeBracket': 0,
+                attribute: 1,
+                closeBracket: 0,
             }],
             // Force attributes to be hyphenated rather than camelCase
             'vue/attribute-hyphenation': [_THROW.ERROR, 'always'],
             // Disallow duplicate key names to avoid overwriting
             'vue/no-dupe-keys': [_THROW.ERROR, {
-                'groups': [],
+                groups: [],
             }],
             // Enforce the shorthand v-on: syntax (@)
             'vue/v-on-style': [_THROW.ERROR, 'shorthand'],
