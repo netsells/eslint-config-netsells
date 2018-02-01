@@ -116,9 +116,9 @@ methods: {
      * Update the user with the given id via the API
      *
      * @param {Number} id - id of user
-     * @param {Object} id - userdata object
+     * @param {Object} data - userdata object
      *
-     * @returns {Promise} 
+     * @returns {Promise}
      */
     updateUser (id, data) {
         return fetch(`/users/${id}`, {
