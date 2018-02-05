@@ -16,7 +16,7 @@ module.exports = {
         }],
         // Require jsdoc data to be consistently valid
         'valid-jsdoc': [_THROW.WARNING, {
-            requireParamDescription: false.
+            requireParamDescription: false,
             requireReturnDescription: false,
             matchDescription: ".+",
             requireReturn: false,
