@@ -72,6 +72,10 @@ module.exports = {
             'vue/no-unused-vars': [_THROW.ERROR],
             // When using the data property on a component (i.e. anywhere except on new Vue), the value must be a function that returns an object.
             'vue/no-shared-component-data': [_THROW.ERROR],
+            // requires indentation within Vue <script> tags
+            'vue/script-indent' : [_THROW.error, 4, {
+                baseIndent: 1,
+            }],
         }],
     },
 }
