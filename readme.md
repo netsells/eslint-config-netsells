@@ -8,7 +8,7 @@ Add the config to your project dependencies:
 
 ```bash
 // Add the configuration
-yarn add netsells/eslint-config-netsells eslint@^4.10.0 eslint-plugin-require-jsdoc-except --dev
+yarn add netsells/eslint-config-netsells
 ```
 
 Extend the config in your project. For example, a `.eslintrc` file in your project root:
