@@ -21,5 +21,7 @@ module.exports = {
             matchDescription: ".+",
             requireReturn: false,
         }],
+        // Discourage using 'var' for creating variables - require using let/const instead
+        'no-var': _THROW.WARNING,
     },
 }
