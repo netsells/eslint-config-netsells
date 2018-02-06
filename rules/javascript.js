@@ -21,5 +21,7 @@ module.exports = {
             matchDescription: ".+",
             requireReturn: false,
         }],
+        // 
+        'arrow-spacing': [_THROW.ERROR, {before: true, after: true}],
     },
 }
