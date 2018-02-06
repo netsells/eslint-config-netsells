@@ -7,14 +7,18 @@ This repository contains the defacto-standard eslint configuration used on all N
 Add the config to your project dependencies:
 
 ```bash
-yarn add netsells/eslint-config-netsells eslint@^4.10.0
+// Add the configuration
+yarn add netsells/eslint-config-netsells eslint@^4.10.0 eslint-plugin-require-jsdoc-except --dev
 ```
 
 Extend the config in your project. For example, a `.eslintrc` file in your project root:
 
 ```json
 {
-  "extends": "netsells"
+    "extends": "netsells",
+    "plugins": [
+        "require-jsdoc-except"
+    ]
 }
 ```
 
