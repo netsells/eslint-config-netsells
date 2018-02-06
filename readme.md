@@ -92,6 +92,42 @@ let array = [
 
 ---
 
+#### 📍 no-mixed-spaces-and-tabs
+Disallow mixed spaces and tabs for indentation
+
+##### ❌ Example of incorrect code for this rule:
+
+```js
+
+function add(x, y) {
+// --->..return x + y;
+
+      return x + y;
+}
+
+function main() {
+// --->var x = 5,
+// --->....y = 7;
+
+    var x = 5,
+        y = 7;
+}
+
+```
+
+##### ✅ Example of correct code for this rule:
+
+```js
+
+function add(x, y) {
+// --->return x + y;
+    return x + y;
+}
+
+```
+
+---
+
 #### 📍 require-jsdoc
 Requires JSDoc definitions for all functions and classes.
 
