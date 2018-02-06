@@ -2,6 +2,11 @@ const _THROW = require('../modules/throwables');
 
 module.exports = {
     rules: {
+        // Enforce consistent spacing before and after the arrow in arrow functions
+        'arrow-spacing': [_THROW.ERROR, {
+            'before': true,
+            'after': true,
+        }],
         // Requires trailing commas when the last element or property is in a different line than the closing ] or } and disallows trailing commas when the last element or property is on the same line as the closing ] or }
         'comma-dangle': [_THROW.ERROR, 'only-multiline'],
         // Require JSDoc on all functions and classes

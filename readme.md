@@ -129,6 +129,37 @@ methods: {
 }
 ```
 
+---
+
+#### 📍 arrow-spacing
+Require space before/after arrow function's arrow
+
+##### ❌ Example of incorrect code for this rule:
+
+```js
+
+()=> {};
+() =>{};
+(a)=> {};
+(a) =>{};
+a =>a;
+a=> a;
+()=> {'\n'};
+() =>{'\n'};
+
+```
+
+##### ✅ Example of correct code for this rule:
+
+```js
+
+() => {};
+(a) => {};
+a => a;
+() => {'\n'};
+
+```
+
 ### Vue
 
 ---
