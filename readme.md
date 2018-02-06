@@ -151,7 +151,7 @@ Foo.prototype.bar = function foo(){
 ##### ✅ Example of correct code for this rule:
 
 ```js
-Foo.prototype.bar = function() {
+Foo.prototype.bar = () => {
     // ...
 }
 ```
