@@ -23,6 +23,7 @@ module.exports = {
                 "destroyed",
                 "beforeUpdate",
                 "updated",
+                "data",
             ],
         }],
         // Require jsdoc data to be consistently valid
