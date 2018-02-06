@@ -21,7 +21,10 @@ module.exports = {
             matchDescription: ".+",
             requireReturn: false,
         }],
-        // 
-        'arrow-spacing': [_THROW.ERROR, {before: true, after: true}],
+        // Requires spacing before and after arrow functions arrow
+        'arrow-spacing': [_THROW.WARNING, {
+            before: true,
+            after: true,
+        }],
     },
 }
