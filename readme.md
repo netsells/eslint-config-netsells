@@ -92,6 +92,31 @@ let array = [
 
 ---
 
+#### 📍 indent
+Requires 4 space indentation 
+
+##### ❌ Example of incorrect code for this rule:
+
+```js
+if (a) {
+  (a) => {
+    return;
+  }  
+}
+```
+
+##### ✅ Example of correct code for this rule:
+
+```js
+if (a) {
+    (a) => {
+        return;
+    }  
+}
+```
+
+---
+
 #### 📍 require-jsdoc
 Requires JSDoc definitions for all functions and classes.
 
