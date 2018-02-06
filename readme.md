@@ -165,6 +165,33 @@ methods: {
 }
 ```
 
+---
+
+#### 📍 func-names
+Disallows explicit function names.
+
+##### ❌ Example of incorrect code for this rule:
+
+```js
+function foo(){
+    // ...
+}
+```
+
+```js
+Foo.prototype.bar = function foo(){
+    // ...
+}
+```
+
+##### ✅ Example of correct code for this rule:
+
+```js
+Foo.prototype.bar = () => {
+    // ...
+}
+```
+
 ### Vue
 
 ---

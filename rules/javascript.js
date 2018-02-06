@@ -23,5 +23,6 @@ module.exports = {
             matchDescription: ".+",
             requireReturn: false,
         }],
+        'func-names': [_THROW.ERROR, 'never'],
     },
 }
