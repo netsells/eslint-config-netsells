@@ -5,7 +5,22 @@ module.exports = {
         // Requires trailing commas when the last element or property is in a different line than the closing ] or } and disallows trailing commas when the last element or property is on the same line as the closing ] or }
         'comma-dangle': [_THROW.ERROR, 'only-multiline'],
         // requires an indentation of 4 spaces
-        'indent': [_THROW.ERROR, 4],
+        'indent': [_THROW.ERROR, 4, {
+            ObjectExpression: 1,
+            MemberExpression: 1,
+            FunctionDeclaration: {
+                body: 1,
+                parameters: 2
+            },
+            FunctionExpression: {
+                body: 1,
+                parameters: 2
+            },
+            CallExpression: {
+                arguments: 1
+            },
+            ArrayExpression: 1,
+        }],
         // Require JSDoc on all functions and classes
         'require-jsdoc': [_THROW.WARNING, {
             require: {
