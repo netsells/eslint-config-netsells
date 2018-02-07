@@ -7,24 +7,18 @@ This repository contains the defacto-standard eslint configuration used on all N
 Add the config to your project dependencies:
 
 ```bash
-yarn add netsells/eslint-config-netsells eslint@^4.10.0
+yarn add netsells/eslint-config-netsells
 ```
 
 Extend the config in your project. For example, a `.eslintrc` file in your project root:
 
 ```json
 {
-  "extends": "netsells"
+    "extends": "netsells",
 }
 ```
 
 ### With webpack
-
-Add the eslint-loader to your project:
-
-```bash
-yarn add eslint-loader
-```
 
 Add the loader into your workflow. The following example will force the linter to be ran before other loaders such as babel compilation. This means we lint the raw ES6 code rather than the transpiled ES5 output:
 
