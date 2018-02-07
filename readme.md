@@ -157,20 +157,16 @@ if (-1 < str.indexOf(substr)) {
 
 ```js
 
-function isReddish(color) {
-    return (color.hue < 60 || 300 < color.hue);
+if (5 & value) {
+    // ...
+}
+
+if (value === "red") {
+    // ...
 }
 
 if (x < -1 || 1 < x) {
     // ...
-}
-
-if (count < 10 && (0 <= rand && rand < 1)) {
-    // ...
-}
-
-function howLong(arr) {
-    return (0 <= arr.length && arr.length < 10) ? "short" : "long";
 }
 
 ```
