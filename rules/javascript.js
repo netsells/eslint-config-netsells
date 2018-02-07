@@ -25,5 +25,7 @@ module.exports = {
         }],
         // Discourage using 'var' for creating variables - require using let/const instead
         'no-var': _THROW.ERROR,
+        // Encourage using template literals instead of '+' operator on strings
+        'prefer-template': _THROW.WARNING,
     },
 }
