@@ -167,10 +167,10 @@ methods: {
 Discourages using `var` for creating variables and requires using `let` or `const` instead
 
 ##### ❌ Example of incorrect code for this rule:
-`var count = posts.length;`
+```var count = posts.length;```
 
 ##### ✅ Example of correct code for this rule:
-`const count = posts.length;`
+```const count = posts.length;```
 
 or, if the value can be changed
 
@@ -193,15 +193,12 @@ arrows on arrow functions should have a space before and after.
 () =>{};
 (a)=> {};
 (a) =>{};
-
 ```
 
 ##### ✅ Example of correct code for this rule:
 
 ```
-
 (a) => {}
-
 ```
 
 ### Vue
