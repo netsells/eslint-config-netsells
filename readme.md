@@ -734,7 +734,7 @@ export default {
 
 #### 📍 no-unused-vars
 
-`@throws Error`
+`@throws Warning`
 
 All imports and vars that are included within code must be used.
 
