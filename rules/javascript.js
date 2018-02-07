@@ -25,5 +25,7 @@ module.exports = {
         }],
         // Discourage using 'var' for creating variables - require using let/const instead
         'no-var': _THROW.ERROR,
+        // Prevents leaving unused imports & vars in code
+        'no-unused-vars': _THROW.WARNING,
     },
 }
