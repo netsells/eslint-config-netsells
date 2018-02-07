@@ -730,6 +730,46 @@ export default {
 }
 ```
 
+--
+
+#### 📍 eqeqeq
+
+`@throws Warning`
+
+Equality operators must now be type-safe - as is considered best practice in coding.
+
+##### ❌ Example of incorrect code for this rule:
+
+```js
+if (x == y) {
+    // code
+}
+
+if ("" == text) {
+    //code
+}
+
+if (obj.stuff != undefined) {
+    // code
+}
+```
+
+##### ✅ Example of correct code for this rule:
+
+```js
+if (x === y) {
+    // code
+}
+
+if ("" === text) {
+    // code
+}
+
+if (obj.stuff !== undefined) {
+    // code
+}
+```
+
 ## Contributing
 
 If you disagree with any rules in this linter, or feel additional rules should be added, please open an issue on this project to initiate an open dialogue with all team members. Please bear in mind this is a public repository.
