@@ -163,42 +163,14 @@ methods: {
 }
 ```
 
-<<<<<<< HEAD
-#### 📍 arrow-spacing
-
-Requires space before and after arrow functions
-=======
 #### 📍 no-var
 Discourages using `var` for creating variables and requires using `let` or `const` instead
->>>>>>> master
 
 ##### ❌ Example of incorrect code for this rule:
-
-```
-<<<<<<< HEAD
-(a)=>{};
-()=> {};
-() =>{};
-(a)=> {};
-(a) =>{};
-
-=======
-var count = posts.length;
->>>>>>> master
-```
+`var count = posts.length;
 
 ##### ✅ Example of correct code for this rule:
-
-```
-<<<<<<< HEAD
-(a) => {}
-
-```
-
-
-=======
-const count = posts.length;
-```
+`const count = posts.length;
 
 or, if the value can be changed
 
@@ -209,7 +181,28 @@ if (additionalPosts.length) {
    count += additionalPosts.length;
 }
 ```
->>>>>>> master
+
+#### 📍 arrow-spacing
+arrows on arrow functions should have a space before and after.
+
+##### ❌ Example of incorrect code for this rule:
+
+```
+(a)=>{};
+()=> {};
+() =>{};
+(a)=> {};
+(a) =>{};
+
+```
+
+##### ✅ Example of correct code for this rule:
+
+```
+
+(a) => {}
+
+```
 
 ### Vue
 
