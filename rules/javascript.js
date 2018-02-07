@@ -25,5 +25,10 @@ module.exports = {
         }],
         // Discourage using 'var' for creating variables - require using let/const instead
         'no-var': _THROW.ERROR,
+        'no-implicit-coercion': {
+            "boolean": true,
+            "number": true,
+            "string": true,
+        } 
     },
 }

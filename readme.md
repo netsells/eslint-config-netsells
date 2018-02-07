@@ -190,6 +190,56 @@ if (additionalPosts.length) {
 }
 ```
 
+
+#### 📍 no-implicit-coercion
+Encourages stopping mixing different types of variables for the sake of cleaner and more readable code.
+
+##### ❌ Example of incorrect code for this rule:
+
+```
+// Boolean
+var b = !!foo;
+var b = ~foo.indexOf(".");
+
+// Number
+var n = +foo;
+var n = 1 * foo;
+
+// Strings
+var s = "" + foo;
+var s = `` + foo;
+foo += "";
+foo += ``;
+
+```
+
+##### ✅ Example of correct code for this rule:
+
+```
+// Boolean
+var b = Boolean(foo);
+var b = foo.indexOf(".") !== -1;
+
+// Number
+var n = Number(foo);
+var n = parseFloat(foo);
+var n = parseInt(foo, 10);
+
+// Strings
+var s = String(foo);
+foo = String(foo);
+```
+
+or, if the value can be changed
+
+```
+let count = posts.length;
+
+if (additionalPosts.length) {
+   count += additionalPosts.length;
+}
+```
+
 ### Vue
 
 ---
