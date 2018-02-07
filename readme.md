@@ -20,12 +20,6 @@ Extend the config in your project. For example, a `.eslintrc` file in your proje
 
 ### With webpack
 
-Add the eslint-loader to your project:
-
-```bash
-yarn add eslint-loader
-```
-
 Add the loader into your workflow. The following example will force the linter to be ran before other loaders such as babel compilation. This means we lint the raw ES6 code rather than the transpiled ES5 output:
 
 ```js
