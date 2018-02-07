@@ -190,6 +190,23 @@ if (additionalPosts.length) {
 }
 ```
 
+#### 📍 
+
+Throw a warning when a regular string contains a text which looks like an ES6 template literal placeholder
+
+##### ❌ Example of incorrect code for this rule:
+
+```
+const greeting = "Hello, ${name}";
+```
+
+##### ✅ Example of correct code for this rule:
+
+```
+const greeting = `Hello, ${name}`;
+```
+
+
 ### Vue
 
 ---
