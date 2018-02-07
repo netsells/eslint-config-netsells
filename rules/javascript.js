@@ -25,5 +25,7 @@ module.exports = {
         }],
         // Discourage using 'var' for creating variables - require using let/const instead
         'no-var': _THROW.ERROR,
+        // Disallow alert() function
+        'no-alert': _THROW.ERROR,
     },
 }

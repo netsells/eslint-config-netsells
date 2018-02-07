@@ -190,6 +190,17 @@ if (additionalPosts.length) {
 }
 ```
 
+#### 📍 no-alert
+
+Disallow alert() function
+
+##### ❌ Example of incorrect code for this rule:
+
+```
+alert('Something went wrong');
+```
+
+
 ### Vue
 
 ---
