@@ -135,13 +135,13 @@ Disallow eval() function
 
 ```js
 
-var obj = { x: "foo" },
+let obj = { x: 'foo' },
     key = "x",
     value = eval("obj." + key);
 
 (0, eval)("var a = 0");
 
-var foo = eval;
+let foo = eval;
 foo("var a = 0");
 
 // This `this` is the global object.
@@ -157,7 +157,7 @@ global.eval("var a = 0");
 
 ```js
 
-var obj = { x: "foo" },
+let obj = { x: 'foo' },
     key = "x",
     value = obj[key];
 
@@ -168,7 +168,7 @@ class A {
     }
 
     eval() {
-        
+
     }
 }
 
