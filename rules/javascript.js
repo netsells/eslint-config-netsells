@@ -25,5 +25,7 @@ module.exports = {
         }],
         // Discourage using 'var' for creating variables - require using let/const instead
         'no-var': _THROW.ERROR,
+        // Forces formatting of curly brace conventions
+        'curly': _THROW.WARNING,
     },
 }
