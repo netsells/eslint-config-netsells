@@ -27,7 +27,7 @@ module.exports = {
         'no-var': _THROW.ERROR,
         // Discourage code typed like yoda would speak
         'yoda': [_THROW.ERROR, 'never', {
-            'exceptRange': true,
+            exceptRange: true,
         }],
     },
 }

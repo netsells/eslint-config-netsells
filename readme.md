@@ -135,7 +135,7 @@ Discourage code typed like yoda would speak
 
 ```js
 
-if ("red" === color) {
+if ('red' === color) {
     // ...
 }
 
@@ -161,7 +161,7 @@ if (5 & value) {
     // ...
 }
 
-if (value === "red") {
+if (value === 'red') {
     // ...
 }
 
