@@ -89,6 +89,24 @@ let array = [
     'c',
 ];
 ```
+---
+
+#### 📍 dot-location
+Requires the dot to be located after the object rather than before the property 
+
+##### ❌ Example of incorrect code for this rule:
+
+```js
+const item = object
+    .property;
+```
+
+##### ✅ Example of correct code for this rule:
+
+```js
+const item = object.
+    property;
+```
 
 ---
 
