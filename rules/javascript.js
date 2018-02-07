@@ -1,6 +1,7 @@
 const _THROW = require('../modules/throwables');
 
 module.exports = {
+    extends: 'eslint:recommended',
     rules: {
         // Disallow mixed spaces and tabs for indentation
         'no-mixed-spaces-and-tabs': [_THROW.WARNING],
