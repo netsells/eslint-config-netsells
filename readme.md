@@ -218,7 +218,7 @@ foo += ``;
 ```
 // Boolean
 const b = Boolean(foo);
-const b = foo.indexOf('.') !== -1;
+const b = foo.includes('.');
 
 // Number
 const n = Number(foo);
