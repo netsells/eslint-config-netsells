@@ -39,6 +39,8 @@ module.exports = {
         }],
         // Discourage using 'var' for creating variables - require using let/const instead
         'no-var': _THROW.ERROR,
+        // Discourage placing the dot on the property rather than the property
+        'dot-location': [_THROW.WARNING, 'property'],
         // Forces formatting of curly brace conventions
         'curly': _THROW.WARNING,
         // Encourage using template literals instead of '+' operator on strings
