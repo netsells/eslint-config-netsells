@@ -199,16 +199,16 @@ Encourages stopping mixing different types of variables for the sake of cleaner 
 ```
 // Boolean
 const b = !!foo;
-const b = ~foo.indexOf(".");
+const b = ~foo.indexOf('.');
 
 // Number
 const n = +foo;
 const n = 1 * foo;
 
 // Strings
-const s = "" + foo;
+const s = '' + foo;
 const s = `` + foo;
-foo += "";
+foo += '';
 foo += ``;
 
 ```
@@ -218,7 +218,7 @@ foo += ``;
 ```
 // Boolean
 const b = Boolean(foo);
-const b = foo.indexOf(".") !== -1;
+const b = foo.indexOf('.') !== -1;
 
 // Number
 const n = Number(foo);
@@ -228,16 +228,6 @@ const n = parseInt(foo, 10);
 // Strings
 const s = String(foo);
 foo = String(foo);
-```
-
-or, if the value can be changed
-
-```
-let count = posts.length;
-
-if (additionalPosts.length) {
-   count += additionalPosts.length;
-}
 ```
 
 ### Vue
