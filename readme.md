@@ -198,16 +198,16 @@ Encourages stopping mixing different types of variables for the sake of cleaner 
 
 ```
 // Boolean
-var b = !!foo;
-var b = ~foo.indexOf(".");
+const b = !!foo;
+const b = ~foo.indexOf(".");
 
 // Number
-var n = +foo;
-var n = 1 * foo;
+const n = +foo;
+const n = 1 * foo;
 
 // Strings
-var s = "" + foo;
-var s = `` + foo;
+const s = "" + foo;
+const s = `` + foo;
 foo += "";
 foo += ``;
 
@@ -217,16 +217,16 @@ foo += ``;
 
 ```
 // Boolean
-var b = Boolean(foo);
-var b = foo.indexOf(".") !== -1;
+const b = Boolean(foo);
+const b = foo.indexOf(".") !== -1;
 
 // Number
-var n = Number(foo);
-var n = parseFloat(foo);
-var n = parseInt(foo, 10);
+const n = Number(foo);
+const n = parseFloat(foo);
+const n = parseInt(foo, 10);
 
 // Strings
-var s = String(foo);
+const s = String(foo);
 foo = String(foo);
 ```
 
