@@ -1,4 +1,5 @@
 const _THROW = require('../modules/throwables');
+const Utils = require('../modules/utils');
 
 module.exports = {
     rules: {
@@ -25,7 +26,7 @@ module.exports = {
         }],
         // Discourage using 'var' for creating variables - require using let/const instead
         'no-var': _THROW.ERROR,
-        // Disallow alert() function
-        'no-alert': _THROW.ERROR,
+        // Disallow alert() function in production, throw a warning in development
+        'no-alert': Utils.isProduction() ? _THROW.ERROR : _THROW.WARNING
     },
 }
