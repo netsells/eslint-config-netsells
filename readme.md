@@ -192,7 +192,8 @@ if (additionalPosts.length) {
 
 #### 📍 no-alert
 
-Disallow alert() function
+Disallow alert() function.
+Throws a warning in development and an error in production.
 
 ##### ❌ Example of incorrect code for this rule:
 
