@@ -755,7 +755,7 @@ function foo() {
 ##### ✅ Example of correct code for this rule:
 
 ```js
-function  foo() {
+function foo() {
     if (x) {
         return a;
     }
