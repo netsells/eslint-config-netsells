@@ -190,6 +190,23 @@ if (additionalPosts.length) {
 }
 ```
 
+#### 📍 prefer-template
+
+Encourage using template literals instead of '+' operator on strings
+
+##### ❌ Example of incorrect code for this rule:
+
+```
+const greeting = 'Hello, ' + this.name;
+```
+
+##### ✅ Example of correct code for this rule:
+
+```
+const greeting = `Hello, ${this.name}`;
+```
+
+
 ### Vue
 
 ---
