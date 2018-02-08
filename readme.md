@@ -197,6 +197,54 @@ function add(x, y) {
 
 ---
 
+#### 📍 no-eval
+Disallow eval() function
+
+##### ❌ Example of incorrect code for this rule:
+
+```js
+
+let obj = { x: 'foo' },
+    key = "x",
+    value = eval("obj." + key);
+
+(0, eval)("var a = 0");
+
+let foo = eval;
+foo("var a = 0");
+
+// This `this` is the global object.
+this.eval("var a = 0");
+
+window.eval("var a = 0");
+
+global.eval("var a = 0");
+
+```
+
+##### ✅ Example of correct code for this rule:
+
+```js
+
+let obj = { x: 'foo' },
+    key = "x",
+    value = obj[key];
+
+class A {
+    foo() {
+        // This is a user-defined method.
+        this.eval("var a = 0");
+    }
+
+    eval() {
+
+    }
+}
+
+```
+
+---
+
 #### 📍 require-jsdoc
 Requires JSDoc definitions for all functions and classes.
 
