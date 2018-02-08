@@ -92,6 +92,56 @@ let array = [
 
 ---
 
+#### 📍 no-empty
+disallow empty block statements
+
+##### ❌ Example of incorrect code for this rule:
+
+```js
+if (foo) {
+}
+
+while (foo) {
+}
+
+switch(foo) {
+}
+
+try {
+    doSomething();
+} catch(ex) {
+
+} finally {
+
+}
+```
+
+##### ✅ Example of correct code for this rule:
+
+```js
+if (foo) {
+    // empty
+}
+
+while (foo) {
+    /* empty */
+}
+
+try {
+    doSomething();
+} catch (ex) {
+    // continue regardless of error
+}
+
+try {
+    doSomething();
+} finally {
+    /* continue regardless of error */
+}
+```
+
+---
+
 #### 📍 no-mixed-spaces-and-tabs
 Disallow mixed spaces and tabs for indentation
 
