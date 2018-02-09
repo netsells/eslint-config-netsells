@@ -25,8 +25,9 @@ module.exports = {
         }],
         // Discourage using 'var' for creating variables - require using let/const instead
         'no-var': _THROW.ERROR,
+        // Disallow else blocks after return statements in if statements
         'no-else-return': [_THROW.WARNING, {
             allowElseIf: false,
-        }]
+        }],
     },
 }
