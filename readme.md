@@ -89,6 +89,75 @@ let array = [
     'c',
 ];
 ```
+---
+
+#### 📍 dot-location
+Requires the dot to be located before the property rather than after the object 
+
+##### ❌ Example of incorrect code for this rule:
+
+```js
+const item = object.
+    property;
+```
+
+##### ✅ Example of correct code for this rule:
+
+```js
+const item = object
+    .property;
+const item = object.property;
+```
+
+---
+
+#### 📍 no-empty
+disallow empty block statements
+
+##### ❌ Example of incorrect code for this rule:
+
+```js
+if (foo) {
+}
+
+while (foo) {
+}
+
+switch(foo) {
+}
+
+try {
+    doSomething();
+} catch(ex) {
+
+} finally {
+
+}
+```
+
+##### ✅ Example of correct code for this rule:
+
+```js
+if (foo) {
+    // empty
+}
+
+while (foo) {
+    /* empty */
+}
+
+try {
+    doSomething();
+} catch (ex) {
+    // continue regardless of error
+}
+
+try {
+    doSomething();
+} finally {
+    /* continue regardless of error */
+}
+```
 
 ---
 
@@ -122,6 +191,54 @@ function main() {
 function add(x, y) {
 // --->return x + y;
     return x + y;
+}
+
+```
+
+---
+
+#### 📍 no-eval
+Disallow eval() function
+
+##### ❌ Example of incorrect code for this rule:
+
+```js
+
+let obj = { x: 'foo' },
+    key = "x",
+    value = eval("obj." + key);
+
+(0, eval)("var a = 0");
+
+let foo = eval;
+foo("var a = 0");
+
+// This `this` is the global object.
+this.eval("var a = 0");
+
+window.eval("var a = 0");
+
+global.eval("var a = 0");
+
+```
+
+##### ✅ Example of correct code for this rule:
+
+```js
+
+let obj = { x: 'foo' },
+    key = "x",
+    value = obj[key];
+
+class A {
+    foo() {
+        // This is a user-defined method.
+        this.eval("var a = 0");
+    }
+
+    eval() {
+
+    }
 }
 
 ```
@@ -165,6 +282,8 @@ methods: {
 }
 ```
 
+---
+
 #### 📍 no-var
 Discourages using `var` for creating variables and requires using `let` or `const` instead
 
@@ -190,7 +309,26 @@ if (additionalPosts.length) {
 }
 ```
 
+#### 📍 prefer-template
+
+Encourage using template literals instead of '+' operator on strings
+
+##### ❌ Example of incorrect code for this rule:
+
+```
+const greeting = 'Hello, ' + this.name;
+```
+
+##### ✅ Example of correct code for this rule:
+
+```
+const greeting = `Hello, ${this.name}`;
+```
+
+---
+
 #### 📍 dot-notation
+
 Forces using dot notation exclusively for getting object properties.
 
 ##### ❌ Example of incorrect code for this rule:
@@ -208,6 +346,7 @@ const b = 'Hello';
 const c = foo[b];
 ```
 
+---
 
 ### Vue
 
@@ -746,6 +885,84 @@ export default {
             foo: 'bar',
         }
     },
+}
+```
+
+--
+
+#### 📍 no-else-return
+
+`@throws Warning`
+
+Prevents a return statement being called _before_ an else. But also, in this instance, as we have allowElseIf set to false, else statements will also _not_ be allowed in code.
+
+##### ❌ Example of incorrect code for this rule:
+
+```js
+function foo() {
+    if (x) {
+        return a;
+    } else if (y) {
+        return b;
+    } else {
+        return c;
+    }
+}
+```
+
+##### ✅ Example of correct code for this rule:
+
+```js
+function foo() {
+    if (x) {
+        return a;
+    }
+    
+    if (y) {
+        return b;   
+    }
+    
+    return c;
+}
+```
+
+--
+
+#### 📍 curly
+
+`@throws Warning`
+
+Curly brace conventions must follow a strict formatted pattern.
+
+##### ❌ Example of incorrect code for this rule:
+
+```js
+if (foo) return;
+
+while (bar)
+    baz();
+
+if (foo) {
+    baz();
+} else qux();
+
+```
+
+##### ✅ Example of correct code for this rule:
+
+```js
+if (foo) {
+    return;
+}
+
+while (bar) {
+    baz();
+}
+
+if (foo) {
+    baz();
+} else {
+    qux();
 }
 ```
 
