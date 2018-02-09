@@ -196,7 +196,7 @@ Forces using dot notation exclusively for getting object properties.
 ##### ❌ Example of incorrect code for this rule:
 
 ```
-const a = foo["bar"];
+const a = foo['bar'];
 ```
 
 ##### ✅ Example of correct code for this rule:
@@ -204,7 +204,7 @@ const a = foo["bar"];
 ```
 const a = foo.bar;
 
-const b = "Hello";
+const b = 'Hello';
 const c = foo[b];
 ```
 
