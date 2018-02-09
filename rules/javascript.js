@@ -47,6 +47,7 @@ module.exports = {
             boolean: true,
             number: true,
             string: true,
+        }],
         // Disallow else blocks after return statements in if statements
         'no-else-return': [_THROW.WARNING, {
             allowElseIf: false,
