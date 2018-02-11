@@ -47,6 +47,12 @@ module.exports = {
         }],
         // Discourage using 'var' for creating variables - require using let/const instead
         'no-var': _THROW.ERROR,
+        // Discourage using confusing and sometimes unreadable JS tricks to do simple functions.
+        'no-implicit-coercion': [_THROW.WARNING, {
+            boolean: true,
+            number: true,
+            string: true,
+        }],
         // Throw a warning when a regular string contains a text which looks like a template literal placeholder
         'no-template-curly-in-string': _THROW.WARNING,
         // Prevents leaving unused imports & vars in code

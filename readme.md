@@ -347,6 +347,48 @@ if (additionalPosts.length) {
 }
 ```
 
+---
+
+#### 📍 no-implicit-coercion
+Encourages stopping mixing different types of variables for the sake of cleaner and more readable code.
+
+##### ❌ Example of incorrect code for this rule:
+
+```js
+// Boolean
+const b = !!foo;
+const b = ~foo.indexOf('.');
+
+// Number
+const n = +foo;
+const n = 1 * foo;
+
+// Strings
+const s = '' + foo;
+const s = `` + foo;
+foo += '';
+foo += ``;
+```
+
+##### ✅ Example of correct code for this rule:
+
+```js
+// Boolean
+const b = Boolean(foo);
+const b = foo.includes('.');
+
+// Number
+const n = Number(foo);
+const n = parseFloat(foo);
+const n = parseInt(foo, 10);
+
+// Strings
+const s = String(foo);
+foo = String(foo);
+```
+
+---
+
 #### 📍 arrow-spacing
 arrows on arrow functions should have a space before and after.
 
