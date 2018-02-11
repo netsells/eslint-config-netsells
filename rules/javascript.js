@@ -40,7 +40,6 @@ module.exports = {
             matchDescription: ".+",
             requireReturn: false,
         }],
-
         // Requires spacing before and after arrow functions arrow
         'arrow-spacing': [_THROW.WARNING, {
             before: true,
