@@ -908,6 +908,40 @@ export default {
 
 --
 
+#### 📍 no-unused-vars
+
+`@throws Warning`
+
+All imports and vars that are included within code must be used.
+
+##### ❌ Example of incorrect code for this rule:
+
+```js
+let foo = 'bar';
+
+function fooBar() {
+    //code
+}
+
+//End of file
+```
+
+##### ✅ Example of correct code for this rule:
+
+```js
+let foo = 'bar';
+
+function fooBar() {
+    return `${foo}bar`;
+    
+    //code
+}
+
+//End of file
+```
+
+---
+
 #### 📍 eqeqeq
 
 `@throws Warning`
@@ -946,7 +980,7 @@ if (obj.stuff !== undefined) {
 }
 ```
 
---
+---
 
 #### 📍 no-else-return
 
