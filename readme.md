@@ -908,6 +908,46 @@ export default {
 
 --
 
+#### 📍 eqeqeq
+
+`@throws Warning`
+
+Equality operators must now be type-safe - as is considered best practice in coding.
+
+##### ❌ Example of incorrect code for this rule:
+
+```js
+if (x == y) {
+    // code
+}
+
+if ("" == text) {
+    //code
+}
+
+if (obj.stuff != undefined) {
+    // code
+}
+```
+
+##### ✅ Example of correct code for this rule:
+
+```js
+if (x === y) {
+    // code
+}
+
+if ("" === text) {
+    // code
+}
+
+if (obj.stuff !== undefined) {
+    // code
+}
+```
+
+--
+
 #### 📍 no-else-return
 
 `@throws Warning`

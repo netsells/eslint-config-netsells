@@ -42,6 +42,8 @@ module.exports = {
         }],
         // Discourage using 'var' for creating variables - require using let/const instead
         'no-var': _THROW.ERROR,
+        // Forces equality operators to be type-safe
+        'eqeqeq': _THROW.WARNING,
         // Discourage code typed like yoda would speak
         'yoda': [_THROW.ERROR, 'never', {
             exceptRange: true,
