@@ -349,22 +349,38 @@ if (additionalPosts.length) {
 }
 ```
 
+
+#### 📍 no-template-curly-in-string
+
+Throw a warning when a regular string contains a text which looks like an ES6 template literal placeholder
+
+##### ❌ Example of incorrect code for this rule:
+
+```js
+const greeting = "Hello, ${name}";
+```
+
+##### ✅ Example of correct code for this rule:
+
+```js
+const greeting = `Hello, ${name}`;
+```
+
 #### 📍 prefer-template
 
 Encourage using template literals instead of '+' operator on strings
 
 ##### ❌ Example of incorrect code for this rule:
 
-```
+```js
 const greeting = 'Hello, ' + this.name;
 ```
 
 ##### ✅ Example of correct code for this rule:
 
-```
+```js
 const greeting = `Hello, ${this.name}`;
 ```
-
 
 ### Vue
 

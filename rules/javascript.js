@@ -42,6 +42,8 @@ module.exports = {
         }],
         // Discourage using 'var' for creating variables - require using let/const instead
         'no-var': _THROW.ERROR,
+        // Throw a warning when a regular string contains a text which looks like a template literal placeholder
+        'no-template-curly-in-string': _THROW.WARNING,
         // Prevents leaving unused imports & vars in code
         'no-unused-vars': _THROW.WARNING,
         // Forces equality operators to be type-safe
