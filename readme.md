@@ -354,7 +354,7 @@ Encourages stopping mixing different types of variables for the sake of cleaner 
 
 ##### ❌ Example of incorrect code for this rule:
 
-```
+```js
 // Boolean
 const b = !!foo;
 const b = ~foo.indexOf('.');
