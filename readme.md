@@ -866,6 +866,44 @@ export default {
 
 --
 
+#### 📍 no-else-return
+
+`@throws Warning`
+
+Prevents a return statement being called _before_ an else. But also, in this instance, as we have allowElseIf set to false, else statements will also _not_ be allowed in code.
+
+##### ❌ Example of incorrect code for this rule:
+
+```js
+function foo() {
+    if (x) {
+        return a;
+    } else if (y) {
+        return b;
+    } else {
+        return c;
+    }
+}
+```
+
+##### ✅ Example of correct code for this rule:
+
+```js
+function foo() {
+    if (x) {
+        return a;
+    }
+    
+    if (y) {
+        return b;   
+    }
+    
+    return c;
+}
+```
+
+--
+
 #### 📍 curly
 
 `@throws Warning`
