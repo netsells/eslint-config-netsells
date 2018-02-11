@@ -57,16 +57,16 @@ Requires trailing commas when the last element or property is in a different lin
 ```js
 let object = { a: 'b', c: 'd', };
 
-let object = { 
-    a: 'b', 
+let object = {
+    a: 'b',
     c: 'd'
 };
 
 let array = ['a', 'b', 'c',];
 
 let array = [
-    'a', 
-    'b', 
+    'a',
+    'b',
     'c'
 ];
 ```
@@ -76,23 +76,23 @@ let array = [
 ```js
 let object = { a: 'b', c: 'd' };
 
-let object = { 
-    a: 'b', 
+let object = {
+    a: 'b',
     c: 'd',
 };
 
 let array = ['a', 'b', 'c'];
 
 let array = [
-    'a', 
-    'b', 
+    'a',
+    'b',
     'c',
 ];
 ```
 ---
 
 #### 📍 dot-location
-Requires the dot to be located before the property rather than after the object 
+Requires the dot to be located before the property rather than after the object
 
 ##### ❌ Example of incorrect code for this rule:
 
@@ -197,8 +197,51 @@ function add(x, y) {
 
 ---
 
+#### 📍 yoda
+Discourage code typed like yoda would speak
+
+##### ❌ Example of incorrect code for this rule:
+
+```js
+
+if ('red' === color) {
+    // ...
+}
+
+if (true == flag) {
+    // ...
+}
+
+if (5 > count) {
+    // ...
+}
+
+if (-1 < str.indexOf(substr)) {
+    // ...
+}
+```
+
+##### ✅ Example of correct code for this rule:
+
+```js
+
+if (5 & value) {
+    // ...
+}
+
+if (value === 'red') {
+    // ...
+}
+
+if (x < -1 || 1 < x) {
+    // ...
+```
+
+---
+
 #### 📍 no-eval
 Disallow eval() function
+
 
 ##### ❌ Example of incorrect code for this rule:
 
@@ -225,7 +268,6 @@ global.eval("var a = 0");
 ##### ✅ Example of correct code for this rule:
 
 ```js
-
 let obj = { x: 'foo' },
     key = "x",
     value = obj[key];
