@@ -47,8 +47,6 @@ Add the loader into your workflow. The following example will force the linter t
 
 ### JavaScript
 
----
-
 #### 📍 comma-dangle
 Requires trailing commas when the last element or property is in a different line than the closing `]` or `}` and disallows trailing commas when the last element or property is on the same line as the closing `]` or `}`. This makes git diffs a lot cleaner with single line changes rather than two.
 
@@ -57,16 +55,16 @@ Requires trailing commas when the last element or property is in a different lin
 ```js
 let object = { a: 'b', c: 'd', };
 
-let object = { 
-    a: 'b', 
+let object = {
+    a: 'b',
     c: 'd'
 };
 
 let array = ['a', 'b', 'c',];
 
 let array = [
-    'a', 
-    'b', 
+    'a',
+    'b',
     'c'
 ];
 ```
@@ -76,23 +74,23 @@ let array = [
 ```js
 let object = { a: 'b', c: 'd' };
 
-let object = { 
-    a: 'b', 
+let object = {
+    a: 'b',
     c: 'd',
 };
 
 let array = ['a', 'b', 'c'];
 
 let array = [
-    'a', 
-    'b', 
+    'a',
+    'b',
     'c',
 ];
 ```
 ---
 
 #### 📍 dot-location
-Requires the dot to be located before the property rather than after the object 
+Requires the dot to be located before the property rather than after the object
 
 ##### ❌ Example of incorrect code for this rule:
 
@@ -197,8 +195,51 @@ function add(x, y) {
 
 ---
 
+#### 📍 yoda
+Discourage code typed like yoda would speak
+
+##### ❌ Example of incorrect code for this rule:
+
+```js
+
+if ('red' === color) {
+    // ...
+}
+
+if (true == flag) {
+    // ...
+}
+
+if (5 > count) {
+    // ...
+}
+
+if (-1 < str.indexOf(substr)) {
+    // ...
+}
+```
+
+##### ✅ Example of correct code for this rule:
+
+```js
+
+if (5 & value) {
+    // ...
+}
+
+if (value === 'red') {
+    // ...
+}
+
+if (x < -1 || 1 < x) {
+    // ...
+```
+
+---
+
 #### 📍 no-eval
 Disallow eval() function
+
 
 ##### ❌ Example of incorrect code for this rule:
 
@@ -225,7 +266,6 @@ global.eval("var a = 0");
 ##### ✅ Example of correct code for this rule:
 
 ```js
-
 let obj = { x: 'foo' },
     key = "x",
     value = obj[key];
@@ -288,13 +328,11 @@ methods: {
 Discourages using `var` for creating variables and requires using `let` or `const` instead
 
 ##### ❌ Example of incorrect code for this rule:
-
 ```
 var count = posts.length;
 ```
 
 ##### ✅ Example of correct code for this rule:
-
 ```
 const count = posts.length;
 ```
@@ -334,7 +372,7 @@ foo += ``;
 
 ##### ✅ Example of correct code for this rule:
 
-```
+```js
 // Boolean
 const b = Boolean(foo);
 const b = foo.includes('.');
@@ -351,23 +389,60 @@ foo = String(foo);
 
 ---
 
+#### 📍 arrow-spacing
+arrows on arrow functions should have a space before and after.
+
+##### ❌ Example of incorrect code for this rule:
+
+```js
+(a)=>{};
+()=> {};
+() =>{};
+(a)=> {};
+(a) =>{};
+```
+
+##### ✅ Example of correct code for this rule:
+
+```js
+(a) => {}
+```
+
+---
+
+#### 📍 no-template-curly-in-string
+
+Throw a warning when a regular string contains a text which looks like an ES6 template literal placeholder
+
+##### ❌ Example of incorrect code for this rule:
+
+```js
+const greeting = "Hello, ${name}";
+```
+
+##### ✅ Example of correct code for this rule:
+
+```js
+const greeting = `Hello, ${name}`;
+```
+
+---
+
 #### 📍 prefer-template
 
 Encourage using template literals instead of '+' operator on strings
 
 ##### ❌ Example of incorrect code for this rule:
 
-```
+```js
 const greeting = 'Hello, ' + this.name;
 ```
 
 ##### ✅ Example of correct code for this rule:
 
-```
+```js
 const greeting = `Hello, ${this.name}`;
 ```
-
----
 
 ### Vue
 
@@ -910,6 +985,80 @@ export default {
 ```
 
 --
+
+#### 📍 no-unused-vars
+
+`@throws Warning`
+
+All imports and vars that are included within code must be used.
+
+##### ❌ Example of incorrect code for this rule:
+
+```js
+let foo = 'bar';
+
+function fooBar() {
+    //code
+}
+
+//End of file
+```
+
+##### ✅ Example of correct code for this rule:
+
+```js
+let foo = 'bar';
+
+function fooBar() {
+    return `${foo}bar`;
+    
+    //code
+}
+
+//End of file
+```
+
+---
+
+#### 📍 eqeqeq
+
+`@throws Warning`
+
+Equality operators must now be type-safe - as is considered best practice in coding.
+
+##### ❌ Example of incorrect code for this rule:
+
+```js
+if (x == y) {
+    // code
+}
+
+if ("" == text) {
+    //code
+}
+
+if (obj.stuff != undefined) {
+    // code
+}
+```
+
+##### ✅ Example of correct code for this rule:
+
+```js
+if (x === y) {
+    // code
+}
+
+if ("" === text) {
+    // code
+}
+
+if (obj.stuff !== undefined) {
+    // code
+}
+```
+
+---
 
 #### 📍 no-else-return
 
