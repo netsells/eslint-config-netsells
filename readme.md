@@ -57,16 +57,16 @@ Requires trailing commas when the last element or property is in a different lin
 ```js
 let object = { a: 'b', c: 'd', };
 
-let object = { 
-    a: 'b', 
+let object = {
+    a: 'b',
     c: 'd'
 };
 
 let array = ['a', 'b', 'c',];
 
 let array = [
-    'a', 
-    'b', 
+    'a',
+    'b',
     'c'
 ];
 ```
@@ -76,18 +76,87 @@ let array = [
 ```js
 let object = { a: 'b', c: 'd' };
 
-let object = { 
-    a: 'b', 
+let object = {
+    a: 'b',
     c: 'd',
 };
 
 let array = ['a', 'b', 'c'];
 
 let array = [
-    'a', 
-    'b', 
+    'a',
+    'b',
     'c',
 ];
+```
+---
+
+#### 📍 dot-location
+Requires the dot to be located before the property rather than after the object
+
+##### ❌ Example of incorrect code for this rule:
+
+```js
+const item = object.
+    property;
+```
+
+##### ✅ Example of correct code for this rule:
+
+```js
+const item = object
+    .property;
+const item = object.property;
+```
+
+---
+
+#### 📍 no-empty
+disallow empty block statements
+
+##### ❌ Example of incorrect code for this rule:
+
+```js
+if (foo) {
+}
+
+while (foo) {
+}
+
+switch(foo) {
+}
+
+try {
+    doSomething();
+} catch(ex) {
+
+} finally {
+
+}
+```
+
+##### ✅ Example of correct code for this rule:
+
+```js
+if (foo) {
+    // empty
+}
+
+while (foo) {
+    /* empty */
+}
+
+try {
+    doSomething();
+} catch (ex) {
+    // continue regardless of error
+}
+
+try {
+    doSomething();
+} finally {
+    /* continue regardless of error */
+}
 ```
 
 ---
@@ -122,6 +191,96 @@ function main() {
 function add(x, y) {
 // --->return x + y;
     return x + y;
+}
+
+```
+
+---
+
+#### 📍 yoda
+Discourage code typed like yoda would speak
+
+##### ❌ Example of incorrect code for this rule:
+
+```js
+
+if ('red' === color) {
+    // ...
+}
+
+if (true == flag) {
+    // ...
+}
+
+if (5 > count) {
+    // ...
+}
+
+if (-1 < str.indexOf(substr)) {
+    // ...
+}
+```
+
+##### ✅ Example of correct code for this rule:
+
+```js
+
+if (5 & value) {
+    // ...
+}
+
+if (value === 'red') {
+    // ...
+}
+
+if (x < -1 || 1 < x) {
+    // ...
+```
+
+---
+
+#### 📍 no-eval
+Disallow eval() function
+
+
+##### ❌ Example of incorrect code for this rule:
+
+```js
+
+let obj = { x: 'foo' },
+    key = "x",
+    value = eval("obj." + key);
+
+(0, eval)("var a = 0");
+
+let foo = eval;
+foo("var a = 0");
+
+// This `this` is the global object.
+this.eval("var a = 0");
+
+window.eval("var a = 0");
+
+global.eval("var a = 0");
+
+```
+
+##### ✅ Example of correct code for this rule:
+
+```js
+let obj = { x: 'foo' },
+    key = "x",
+    value = obj[key];
+
+class A {
+    foo() {
+        // This is a user-defined method.
+        this.eval("var a = 0");
+    }
+
+    eval() {
+
+    }
 }
 
 ```
@@ -190,22 +349,38 @@ if (additionalPosts.length) {
 }
 ```
 
-#### 📍 
+
+#### 📍 no-template-curly-in-string
 
 Throw a warning when a regular string contains a text which looks like an ES6 template literal placeholder
 
 ##### ❌ Example of incorrect code for this rule:
 
-```
+```js
 const greeting = "Hello, ${name}";
 ```
 
 ##### ✅ Example of correct code for this rule:
 
-```
+```js
 const greeting = `Hello, ${name}`;
 ```
 
+#### 📍 prefer-template
+
+Encourage using template literals instead of '+' operator on strings
+
+##### ❌ Example of incorrect code for this rule:
+
+```js
+const greeting = 'Hello, ' + this.name;
+```
+
+##### ✅ Example of correct code for this rule:
+
+```js
+const greeting = `Hello, ${this.name}`;
+```
 
 ### Vue
 
@@ -744,6 +919,158 @@ export default {
             foo: 'bar',
         }
     },
+}
+```
+
+--
+
+#### 📍 no-unused-vars
+
+`@throws Warning`
+
+All imports and vars that are included within code must be used.
+
+##### ❌ Example of incorrect code for this rule:
+
+```js
+let foo = 'bar';
+
+function fooBar() {
+    //code
+}
+
+//End of file
+```
+
+##### ✅ Example of correct code for this rule:
+
+```js
+let foo = 'bar';
+
+function fooBar() {
+    return `${foo}bar`;
+    
+    //code
+}
+
+//End of file
+```
+
+---
+
+#### 📍 eqeqeq
+
+`@throws Warning`
+
+Equality operators must now be type-safe - as is considered best practice in coding.
+
+##### ❌ Example of incorrect code for this rule:
+
+```js
+if (x == y) {
+    // code
+}
+
+if ("" == text) {
+    //code
+}
+
+if (obj.stuff != undefined) {
+    // code
+}
+```
+
+##### ✅ Example of correct code for this rule:
+
+```js
+if (x === y) {
+    // code
+}
+
+if ("" === text) {
+    // code
+}
+
+if (obj.stuff !== undefined) {
+    // code
+}
+```
+
+---
+
+#### 📍 no-else-return
+
+`@throws Warning`
+
+Prevents a return statement being called _before_ an else. But also, in this instance, as we have allowElseIf set to false, else statements will also _not_ be allowed in code.
+
+##### ❌ Example of incorrect code for this rule:
+
+```js
+function foo() {
+    if (x) {
+        return a;
+    } else if (y) {
+        return b;
+    } else {
+        return c;
+    }
+}
+```
+
+##### ✅ Example of correct code for this rule:
+
+```js
+function foo() {
+    if (x) {
+        return a;
+    }
+    
+    if (y) {
+        return b;   
+    }
+    
+    return c;
+}
+```
+
+--
+
+#### 📍 curly
+
+`@throws Warning`
+
+Curly brace conventions must follow a strict formatted pattern.
+
+##### ❌ Example of incorrect code for this rule:
+
+```js
+if (foo) return;
+
+while (bar)
+    baz();
+
+if (foo) {
+    baz();
+} else qux();
+
+```
+
+##### ✅ Example of correct code for this rule:
+
+```js
+if (foo) {
+    return;
+}
+
+while (bar) {
+    baz();
+}
+
+if (foo) {
+    baz();
+} else {
+    qux();
 }
 ```
 
