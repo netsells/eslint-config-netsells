@@ -40,6 +40,11 @@ module.exports = {
             matchDescription: ".+",
             requireReturn: false,
         }],
+        // Requires spacing before and after arrow functions arrow
+        'arrow-spacing': [_THROW.WARNING, {
+            before: true,
+            after: true,
+        }],
         // Discourage using 'var' for creating variables - require using let/const instead
         'no-var': _THROW.ERROR,
         // Throw a warning when a regular string contains a text which looks like a template literal placeholder

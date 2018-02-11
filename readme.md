@@ -47,8 +47,6 @@ Add the loader into your workflow. The following example will force the linter t
 
 ### JavaScript
 
----
-
 #### 📍 comma-dangle
 Requires trailing commas when the last element or property is in a different line than the closing `]` or `}` and disallows trailing commas when the last element or property is on the same line as the closing `]` or `}`. This makes git diffs a lot cleaner with single line changes rather than two.
 
@@ -324,17 +322,17 @@ methods: {
 }
 ```
 
+---
+
 #### 📍 no-var
 Discourages using `var` for creating variables and requires using `let` or `const` instead
 
 ##### ❌ Example of incorrect code for this rule:
-
 ```
 var count = posts.length;
 ```
 
 ##### ✅ Example of correct code for this rule:
-
 ```
 const count = posts.length;
 ```
@@ -349,6 +347,26 @@ if (additionalPosts.length) {
 }
 ```
 
+#### 📍 arrow-spacing
+arrows on arrow functions should have a space before and after.
+
+##### ❌ Example of incorrect code for this rule:
+
+```js
+(a)=>{};
+()=> {};
+() =>{};
+(a)=> {};
+(a) =>{};
+```
+
+##### ✅ Example of correct code for this rule:
+
+```js
+(a) => {}
+```
+
+---
 
 #### 📍 no-template-curly-in-string
 
@@ -365,6 +383,8 @@ const greeting = "Hello, ${name}";
 ```js
 const greeting = `Hello, ${name}`;
 ```
+
+---
 
 #### 📍 prefer-template
 
