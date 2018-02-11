@@ -1,5 +1,5 @@
 ## Suggested rule/changes(s):
-* `<rule-name>` 
+* `<rule-name>` : `severity: (WARNING or ERROR)`
 
 ## Reason for addition/amendment
 >*Please specify what the new rule does, or what has changed and how that will now affect code linted.*
