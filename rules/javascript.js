@@ -45,6 +45,9 @@ module.exports = {
         // Discourage code typed like yoda would speak
         'yoda': [_THROW.ERROR, 'never', {
             exceptRange: true,
+        // Disallow else blocks after return statements in if statements
+        'no-else-return': [_THROW.WARNING, {
+            allowElseIf: false,
         }],
         // Discourage placing the dot on the property rather than the property
         'dot-location': [_THROW.WARNING, 'property'],
