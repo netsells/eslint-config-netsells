@@ -40,8 +40,28 @@ module.exports = {
             matchDescription: ".+",
             requireReturn: false,
         }],
+        // Requires spacing before and after arrow functions arrow
+        'arrow-spacing': [_THROW.WARNING, {
+            before: true,
+            after: true,
+        }],
         // Discourage using 'var' for creating variables - require using let/const instead
         'no-var': _THROW.ERROR,
+        'dot-notation': [_THROW.WARNING, {
+            allowKeywords: false,
+        }],
+        // Discourage using confusing and sometimes unreadable JS tricks to do simple functions.
+        'no-implicit-coercion': [_THROW.WARNING, {
+            boolean: true,
+            number: true,
+            string: true,
+        }],
+        // Throw a warning when a regular string contains a text which looks like a template literal placeholder
+        'no-template-curly-in-string': _THROW.WARNING,
+        // Prevents leaving unused imports & vars in code
+        'no-unused-vars': _THROW.WARNING,
+        // Forces equality operators to be type-safe
+        'eqeqeq': _THROW.WARNING,
         // Discourage code typed like yoda would speak
         'yoda': [_THROW.ERROR, 'never', {
             exceptRange: true,
