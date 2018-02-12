@@ -47,9 +47,7 @@ module.exports = {
         }],
         // Discourage using 'var' for creating variables - require using let/const instead
         'no-var': _THROW.ERROR,
-        'dot-notation': [_THROW.WARNING, {
-            allowKeywords: false,
-        }],
+        'dot-notation': _THROW.WARNING,
         // Discourage using confusing and sometimes unreadable JS tricks to do simple functions.
         'no-implicit-coercion': [_THROW.WARNING, {
             boolean: true,
