@@ -9,8 +9,10 @@ module.exports = {
     },
     env: {
         es6: true,
-        node: true,
-        jquery: true,
+        node: true
+    },
+    globals: {
+        $: true
     },
     plugins: [
         'require-jsdoc-except',
