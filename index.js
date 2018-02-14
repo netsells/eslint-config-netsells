@@ -12,7 +12,7 @@ module.exports = {
         node: true,
     },
     globals: {
-        $: true,
+        jquery: true,
     },
     plugins: [
         'require-jsdoc-except',
