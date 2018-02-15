@@ -70,6 +70,8 @@ module.exports = {
         }],
         // Discourage placing the dot on the property rather than the property
         'dot-location': [_THROW.WARNING, 'property'],
+        // disallow floating decimals. Cause they're disgusting!
+        'no-floating-decimal': _THROW.ERROR,
         // Forces formatting of curly brace conventions
         'curly': _THROW.WARNING,
         // Encourage using template literals instead of '+' operator on strings
