@@ -74,5 +74,7 @@ module.exports = {
         'curly': _THROW.WARNING,
         // Encourage using template literals instead of '+' operator on strings
         'prefer-template': _THROW.WARNING,
+        // Discourage conditional assignment of variables
+        'no-cond-assign': _THROW.WARNING,
     },
 }
