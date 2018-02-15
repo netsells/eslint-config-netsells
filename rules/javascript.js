@@ -9,6 +9,8 @@ module.exports = {
         'no-mixed-spaces-and-tabs': [_THROW.WARNING],
         // Disallow empty block statements
         'no-empty': _THROW.WARNING,
+        // Disallow empty functions
+        'no-empty-function': _THROW.WARNING,
         // Requires trailing commas when the last element or property is in a different line than the closing ] or } and disallows trailing commas when the last element or property is on the same line as the closing ] or }
         'comma-dangle': [_THROW.ERROR, 'always-multiline'],
         // Require JSDoc on all functions and classes
