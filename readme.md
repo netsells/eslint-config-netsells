@@ -1159,6 +1159,42 @@ if (foo) {
 }
 ```
 
+#### 📍 no-lonely-if
+
+`@throws Warning`
+
+If an if statement is the only statement in the else block, it is clearer to use an else if.
+
+##### ❌ Example of incorrect code for this rule:
+
+```if (foo) {
+    // ...
+} else {
+    if (bar) {
+        // ...
+    }
+}
+
+if (condition) {
+    // ...
+} else {
+    if (anotherCondition) {
+        // ...
+    }
+}
+```
+
+##### ✅ Example of correct code for this rule:
+
+```if (condition) {
+    // ...
+} else if (anotherCondition) {
+    // ...
+} else {
+    // ...
+}
+```
+
 ## Contributing
 
 If you disagree with any rules in this linter, or feel additional rules should be added, please open an issue on this project to initiate an open dialogue with all team members. Please bear in mind this is a public repository.
