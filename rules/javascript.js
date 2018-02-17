@@ -74,6 +74,7 @@ module.exports = {
         'curly': _THROW.WARNING,
         // Encourage using template literals instead of '+' operator on strings
         'prefer-template': _THROW.WARNING,
+        // Forces use of ES6 arrow function expressions
         'prefer-arrow-callback': _THROW.ERROR,
     },
 }
