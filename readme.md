@@ -1158,6 +1158,37 @@ if (foo) {
     qux();
 }
 ```
+--
+
+#### 📍 prefer-arrow-callback
+
+`@throws Error`
+
+Forces user to use ES6 arrow function expressions
+
+##### ❌ Example of incorrect code for this rule:
+
+```js
+foo(function(a) { 
+    return a; 
+});
+
+foo(function() { 
+    return this.a; 
+}.bind(this));
+```
+
+##### ✅ Example of correct code for this rule:
+
+```js
+foo((a) => {
+    return a;
+});
+
+foo(() => {
+    return this.a;
+});
+```
 
 ## Contributing
 
