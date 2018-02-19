@@ -1119,7 +1119,35 @@ function foo() {
 }
 ```
 
---
+---
+
+#### 📍 no-floating-decimal
+
+`@throws Warning`
+
+Prevents using floating decimals
+
+##### ❌ Example of incorrect code for this rule:
+
+```js
+
+const num = .5;
+const ber = 2.;
+const wang = -.7;
+
+```
+
+##### ✅ Example of correct code for this rule:
+
+```js
+
+const num = 0.5;
+const ber = 2.0;
+const wang = -0.7;
+
+```
+
+---
 
 #### 📍 curly
 
