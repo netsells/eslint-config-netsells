@@ -10,8 +10,9 @@ module.exports = {
     env: {
         es6: true,
         node: true,
+        jquery: true,
     },
     plugins: [
         'require-jsdoc-except',
-    ]
+    ],
 };
