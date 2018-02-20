@@ -1167,7 +1167,8 @@ If an if statement is the only statement in the else block, it is clearer to use
 
 ##### ❌ Example of incorrect code for this rule:
 
-```if (foo) {
+```js
+if (foo) {
     // ...
 } else {
     if (bar) {
@@ -1186,7 +1187,8 @@ if (condition) {
 
 ##### ✅ Example of correct code for this rule:
 
-```if (condition) {
+```js
+if (condition) {
     // ...
 } else if (anotherCondition) {
     // ...
