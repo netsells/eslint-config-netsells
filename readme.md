@@ -404,7 +404,7 @@ if (additionalPosts.length) {
 }
 ```
 
-#### 📍 no-implicit-coercion
+#### 📍 no-alert
 Disallows using alert() function in production.
 Will throw a warning if the node env is not set to production (allows an alert-driven development).
 
