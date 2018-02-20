@@ -159,13 +159,77 @@ try {
 
 ---
 
+#### 📍 no-empty-function
+
+Disallow empty functions
+
+##### ❌ Example of incorrect code for this rule:
+
+```js
+function foo () {}
+
+let foo = function () {};
+
+let foo = () => {};
+
+let obj = {
+    foo: function () {},
+
+    foo () {},
+};
+
+class A {
+    constructor() {}
+
+    foo() {}
+}
+```
+
+##### ✅ Example of correct code for this rule:
+
+```js
+function foo () {
+    // do nothing.
+}
+
+let foo = function () {
+    // any clear comments.
+};
+
+let foo = () => {
+    bar();
+};
+
+let obj = {
+    foo: function () {
+        // do nothing.
+    },
+
+    foo () {
+        // do nothing.
+    },
+};
+
+class A {
+    constructor () {
+        // do nothing.
+    }
+
+    foo () {
+        // do nothing.
+    }
+}
+```
+
+---
+
 #### 📍 space-before-function-paren
+
 Require a space before function parenthesis
 
 ##### ❌ Example of incorrect code for this rule:
 
 ```js
-
 function foo () {
     // ...
 }
@@ -216,6 +280,7 @@ var foo = async() => 1
 ```
 
 ---
+
 #### 📍 no-mixed-spaces-and-tabs
 Disallow mixed spaces and tabs for indentation
 
