@@ -159,6 +159,63 @@ try {
 
 ---
 
+#### 📍 space-before-function-paren
+Require a space before function parenthesis
+
+##### ❌ Example of incorrect code for this rule:
+
+```js
+
+function foo () {
+    // ...
+}
+
+let bar = function () {
+    // ...
+};
+
+class Foo {
+    constructor () {
+        // ...
+    }
+}
+
+let foo = {
+    bar () {
+        // ...
+    }
+};
+
+var foo = async() => 1
+```
+
+##### ✅ Example of correct code for this rule:
+
+```js
+function foo() {
+    // ...
+}
+
+let bar = function() {
+    // ...
+};
+
+class Foo {
+    constructor() {
+        // ...
+    }
+}
+
+let foo = {
+    bar() {
+        // ...
+    }
+};
+
+var foo = async() => 1
+```
+
+---
 #### 📍 no-mixed-spaces-and-tabs
 Disallow mixed spaces and tabs for indentation
 
@@ -1129,7 +1186,35 @@ function foo() {
 }
 ```
 
---
+---
+
+#### 📍 no-floating-decimal
+
+`@throws Warning`
+
+Prevents using floating decimals
+
+##### ❌ Example of incorrect code for this rule:
+
+```js
+
+const num = .5;
+const ber = 2.;
+const wang = -.7;
+
+```
+
+##### ✅ Example of correct code for this rule:
+
+```js
+
+const num = 0.5;
+const ber = 2.0;
+const wang = -0.7;
+
+```
+
+---
 
 #### 📍 curly
 
@@ -1167,6 +1252,93 @@ if (foo) {
 } else {
     qux();
 }
+```
+--
+
+#### 📍 no cond assign
+
+`@throws Warning`
+
+Discourages the assignment of variables in conditional statements
+
+Allows assignment within params by default
+
+##### ❌ Example of incorrect code for this rule:
+
+```js
+
+const x;
+if (x = 0) {
+    const b = 1;
+}
+
+// Practical example that is similar to an error
+function setHeight(someNode) {
+    "use strict";
+    do {
+        someNode.height = "100px";
+    } while (someNode = someNode.parentNode);
+}
+
+```
+
+##### ✅ Example of correct code for this rule:
+
+```js
+
+const x;
+if (x === 0) {
+    const b = 1;
+}
+
+// Practical example that wraps the assignment in parentheses
+function setHeight(someNode) {
+    "use strict";
+    do {
+        someNode.height = "100px";
+    } while ((someNode = someNode.parentNode));
+}
+
+// Practical example that wraps the assignment and tests for 'null'
+function setHeight(someNode) {
+    "use strict";
+    do {
+        someNode.height = "100px";
+    } while ((someNode = someNode.parentNode) !== null);
+}
+
+```
+
+---
+
+#### 📍 prefer-arrow-callback
+
+`@throws Error`
+
+Forces user to use ES6 arrow function expressions
+
+##### ❌ Example of incorrect code for this rule:
+
+```js
+foo(function(a) { 
+    return a; 
+});
+
+foo(function() { 
+    return this.a; 
+}.bind(this));
+```
+
+##### ✅ Example of correct code for this rule:
+
+```js
+foo((a) => {
+    return a;
+});
+
+foo(() => {
+    return this.a;
+});
 ```
 
 ## Contributing
