@@ -1,4 +1,5 @@
 const _THROW = require('../modules/throwables');
+const Utils = require('../modules/utils');
 
 module.exports = {
     extends: 'eslint:recommended',
@@ -9,6 +10,10 @@ module.exports = {
         'no-mixed-spaces-and-tabs': [_THROW.WARNING],
         // Disallow empty block statements
         'no-empty': _THROW.WARNING,
+        // Disallow empty functions
+        'no-empty-function': _THROW.WARNING,
+        // Require a space before function parenthesis 
+        'space-before-function-paren': [_THROW.WARNING, 'never'],
         // Requires trailing commas when the last element or property is in a different line than the closing ] or } and disallows trailing commas when the last element or property is on the same line as the closing ] or }
         'comma-dangle': [_THROW.ERROR, 'always-multiline'],
         // Require JSDoc on all functions and classes
@@ -47,6 +52,8 @@ module.exports = {
         }],
         // Discourage using 'var' for creating variables - require using let/const instead
         'no-var': _THROW.ERROR,
+        // Disallow alert() function in production, throw a warning in development
+        'no-alert': Utils.isProduction() ? _THROW.ERROR : _THROW.WARNING,
         'dot-notation': _THROW.WARNING,
         // Discourage using confusing and sometimes unreadable JS tricks to do simple functions.
         'no-implicit-coercion': [_THROW.WARNING, {
@@ -70,11 +77,17 @@ module.exports = {
         }],
         // Discourage placing the dot on the property rather than the property
         'dot-location': [_THROW.WARNING, 'property'],
+        // disallow floating decimals. Cause they're disgusting!
+        'no-floating-decimal': _THROW.ERROR,
         // Forces formatting of curly brace conventions
         'curly': _THROW.WARNING,
         // Encourage using template literals instead of '+' operator on strings
         'prefer-template': _THROW.WARNING,
         //  discourage if statements as the only statement in else blocks
         'no-lonely-if': _THROW.WARNING,
+        // Discourage conditional assignment of variables
+        'no-cond-assign': _THROW.WARNING,
+        // Forces use of ES6 arrow function expressions
+        'prefer-arrow-callback': _THROW.ERROR,
     },
 }
