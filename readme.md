@@ -166,6 +166,32 @@ Require a space before function parenthesis
 
 ```js
 
+function foo () {
+    // ...
+}
+
+let bar = function () {
+    // ...
+};
+
+class Foo {
+    constructor () {
+        // ...
+    }
+}
+
+let foo = {
+    bar () {
+        // ...
+    }
+};
+
+var foo = async() => 1
+```
+
+##### ✅ Example of correct code for this rule:
+
+```js
 function foo() {
     // ...
 }
@@ -187,32 +213,6 @@ let foo = {
 };
 
 var foo = async() => 1
-```
-
-##### ✅ Example of correct code for this rule:
-
-```js
-function foo () {
-    // ...
-}
-
-let bar = function () {
-    // ...
-};
-
-class Foo {
-    constructor () {
-        // ...
-    }
-}
-
-let foo = {
-    bar () {
-        // ...
-    }
-};
-
-var foo = async () => 1
 ```
 
 ---
