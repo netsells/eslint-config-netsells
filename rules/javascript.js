@@ -10,7 +10,7 @@ module.exports = {
         // Disallow empty block statements
         'no-empty': _THROW.WARNING,
         // Require a space before function parenthesis 
-        'space-before-function-paren': _THROW.WARNING,
+        'space-before-function-paren': [_THROW.WARNING, 'never'],
         // Requires trailing commas when the last element or property is in a different line than the closing ] or } and disallows trailing commas when the last element or property is on the same line as the closing ] or }
         'comma-dangle': [_THROW.ERROR, 'always-multiline'],
         // Require JSDoc on all functions and classes
