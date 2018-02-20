@@ -404,7 +404,17 @@ if (additionalPosts.length) {
 }
 ```
 
----
+#### 📍 no-alert
+Disallows using alert() function in production.
+Will throw a warning if the node env is not set to production (allows an alert-driven development).
+
+##### ❌ Example of incorrect code for this rule:
+
+```js
+if (error) {   
+    alert(error);
+}
+```
 
 #### 📍 no-implicit-coercion
 Encourages stopping mixing different types of variables for the sake of cleaner and more readable code.

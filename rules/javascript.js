@@ -1,4 +1,5 @@
 const _THROW = require('../modules/throwables');
+const Utils = require('../modules/utils');
 
 module.exports = {
     extends: 'eslint:recommended',
@@ -49,6 +50,8 @@ module.exports = {
         }],
         // Discourage using 'var' for creating variables - require using let/const instead
         'no-var': _THROW.ERROR,
+        // Disallow alert() function in production, throw a warning in development
+        'no-alert': Utils.isProduction() ? _THROW.ERROR : _THROW.WARNING,
         'dot-notation': _THROW.WARNING,
         // Discourage using confusing and sometimes unreadable JS tricks to do simple functions.
         'no-implicit-coercion': [_THROW.WARNING, {
