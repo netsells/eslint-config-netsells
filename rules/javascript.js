@@ -89,5 +89,7 @@ module.exports = {
         'no-cond-assign': _THROW.WARNING,
         // Forces use of ES6 arrow function expressions
         'prefer-arrow-callback': _THROW.ERROR,
+        // Encourages using camelcase naming convention
+        'camelcase': _THROW.WARNING,
     },
 }

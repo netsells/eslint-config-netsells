@@ -1443,6 +1443,36 @@ if (condition) {
     // ...
 }
 ```
+#### 📍 camelcase
+
+`@throws Warning`
+
+The rule looks for any _ located in your code in the middle of your variable names and will throw a warning. CamelCase should be used instead.
+
+##### ❌ Example of incorrect code for this rule:
+
+```js
+let my_favorite_color = "#112C85";
+
+function do_something() {
+    // ...
+}
+
+let obj = {
+    my_pref: 1
+};
+```
+
+##### ✅ Example of correct code for this rule:
+
+```js
+let myFavoriteColor   = "#112C85";
+
+function foo({ isCamelCased }) {
+    // ...
+};
+```
+
 
 ## Contributing
 
