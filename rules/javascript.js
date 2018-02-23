@@ -90,6 +90,6 @@ module.exports = {
         // Forces use of ES6 arrow function expressions
         'prefer-arrow-callback': _THROW.ERROR,
         // Disallow duplicate imports
-        'no-duplicate-imports':  _THROW.WARNING,
+        'no-duplicate-imports': _THROW.WARNING,
     },
 }
