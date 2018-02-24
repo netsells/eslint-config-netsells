@@ -54,6 +54,8 @@ module.exports = {
         'no-var': _THROW.ERROR,
         // Disallow alert() function in production, throw a warning in development
         'no-alert': Utils.isProduction() ? _THROW.ERROR : _THROW.WARNING,
+        // Disallow using the console in production, throw a warning in development
+        'no-console': Utils.isProduction() ? _THROW.ERROR : _THROW.WARNING,
         'dot-notation': _THROW.WARNING,
         // Discourage using confusing and sometimes unreadable JS tricks to do simple functions.
         'no-implicit-coercion': [_THROW.WARNING, {

@@ -481,6 +481,18 @@ if (error) {
 }
 ```
 
+#### 📍 no-console
+Disallows using the console in production.
+Will throw a warning if the node env is not set to production.
+
+##### ❌ Example of incorrect code for this rule:
+
+```js
+if (error) {   
+    console.log(error);
+}
+```
+
 #### 📍 no-implicit-coercion
 Encourages stopping mixing different types of variables for the sake of cleaner and more readable code.
 
