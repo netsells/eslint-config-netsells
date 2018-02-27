@@ -1427,6 +1427,8 @@ foo(() => {
 });
 ```
 
+---
+
 #### 📍 no-lonely-if
 
 `@throws Warning`
@@ -1463,6 +1465,51 @@ if (condition) {
 } else {
     // ...
 }
+```
+
+---
+
+#### 📍 prefer-const
+
+`@throws Warning`
+
+If a variable is set using 'let' and then never updated a warning will be issued as 'const' is preferred in this instance.
+
+##### ❌ Example of incorrect code for this rule:
+
+```js
+let a = 3;
+console.log(a);
+
+let a;
+a = 1;
+return a;
+
+for (let i in [1, 2, 3]) {
+    console.log(i);
+}
+```
+
+##### ✅ Example of correct code for this rule:
+
+```js
+const a = 3;
+console.log(a);
+
+for (const i in [1, 2, 3]) {
+  console.log(i);
+}
+
+let a;
+a = 1;
+a = 2;
+return a;
+
+let a;
+if (true) {
+    a = 1;
+}
+
 ```
 
 ## Contributing
