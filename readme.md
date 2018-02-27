@@ -1406,6 +1406,8 @@ foo(() => {
 });
 ```
 
+---
+
 #### 📍 no-lonely-if
 
 `@throws Warning`
@@ -1443,6 +1445,8 @@ if (condition) {
     // ...
 }
 ```
+
+---
 
 #### 📍 prefer-const
 
