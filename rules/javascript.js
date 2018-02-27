@@ -91,5 +91,7 @@ module.exports = {
         'prefer-arrow-callback': _THROW.ERROR,
         // Flags variables that are defined using 'let' but then never reassigned
         'prefer-const': _THROW.WARNING,
+        // Disallow duplicate imports
+        'no-duplicate-imports': _THROW.WARNING,
     },
 }

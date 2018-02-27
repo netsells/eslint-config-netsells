@@ -599,6 +599,27 @@ const c = foo[b];
 
 ---
 
+#### 📍 no-duplicate-imports
+
+Disallow duplicate imports.
+
+##### ❌ Example of incorrect code for this rule:
+
+```js
+import { merge } from 'module';
+import something from 'another-module';
+import { find } from 'module';
+```
+
+##### ✅ Example of correct code for this rule:
+
+```js
+import { merge, find } from 'module';
+import something from 'another-module';
+```
+
+---
+
 ### Vue
 
 ---
