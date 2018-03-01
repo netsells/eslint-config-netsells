@@ -13,5 +13,8 @@
     "eslint": "^4.10.0",
     "eslint-plugin-require-jsdoc-except": "^1.1.0",
     "eslint-plugin-vue": "^3.13.1"
+  },
+  "devDependencies": {
+    "husky": "^0.15.0-rc.8"
   }
 }
