@@ -43,6 +43,13 @@ Add the loader into your workflow. The following example will force the linter t
 },
 ```
 
+If this doesn't run straight away, you may need to fix the permissions of the hook file:
+
+```bash
+chmod +x .git/hooks/pre-commit
+
+```
+
 ### To add pre commit linter
 
 This will run the git pre-commit hook which will run a linter before you commit to the project. Meaning all commited code should be nice and linted.
