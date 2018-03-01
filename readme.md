@@ -43,6 +43,18 @@ Add the loader into your workflow. The following example will force the linter t
 },
 ```
 
+### To add pre commit linter
+
+This will run the git pre-commit hook which will run a linter before you commit to the project. Meaning all commited code should be nice and linted.
+
+```js
+
+    // .git/hooks/pre-commit
+
+    npm run lint
+
+```
+
 ## Rules
 
 ### JavaScript
