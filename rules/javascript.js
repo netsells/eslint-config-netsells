@@ -89,7 +89,7 @@ module.exports = {
         'no-cond-assign': _THROW.WARNING,
         // Forces use of ES6 arrow function expressions
         'prefer-arrow-callback': _THROW.ERROR,
-        // Disallows importing the lodash
+        // Disallows importing lodash
         'no-restricted-imports': ['error', 'lodash']
     },
 }
