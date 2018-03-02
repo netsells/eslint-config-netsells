@@ -469,6 +469,8 @@ if (additionalPosts.length) {
 }
 ```
 
+---
+
 #### 📍 no-alert
 Disallows using alert() function in production.
 Will throw a warning if the node env is not set to production (allows an alert-driven development).
@@ -481,6 +483,8 @@ if (error) {
 }
 ```
 
+---
+
 #### 📍 no-console
 Disallows using the console in production.
 Will throw a warning if the node env is not set to production.
@@ -492,6 +496,8 @@ if (error) {
     console.log(error);
 }
 ```
+
+---
 
 #### 📍 no-implicit-coercion
 Encourages stopping mixing different types of variables for the sake of cleaner and more readable code.
