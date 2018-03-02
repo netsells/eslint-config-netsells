@@ -597,6 +597,8 @@ const b = 'Hello';
 const c = foo[b];
 ```
 
+---
+
 #### 📍 no-restricted-imports
 
 Disallows importing lodash - people should import only the lodash sub-modules they need.
