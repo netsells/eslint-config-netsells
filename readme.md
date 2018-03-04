@@ -469,6 +469,8 @@ if (additionalPosts.length) {
 }
 ```
 
+---
+
 #### 📍 no-alert
 Disallows using alert() function in production.
 Will throw a warning if the node env is not set to production (allows an alert-driven development).
@@ -480,6 +482,22 @@ if (error) {
     alert(error);
 }
 ```
+
+---
+
+#### 📍 no-console
+Disallows using the console in production.
+Will throw a warning if the node env is not set to production.
+
+##### ❌ Example of incorrect code for this rule:
+
+```js
+if (error) {   
+    console.log(error);
+}
+```
+
+---
 
 #### 📍 no-implicit-coercion
 Encourages stopping mixing different types of variables for the sake of cleaner and more readable code.
@@ -599,6 +617,27 @@ const c = foo[b];
 
 ---
 
+#### 📍 no-duplicate-imports
+
+Disallow duplicate imports.
+
+##### ❌ Example of incorrect code for this rule:
+
+```js
+import { merge } from 'module';
+import something from 'another-module';
+import { find } from 'module';
+```
+
+##### ✅ Example of correct code for this rule:
+
+```js
+import { merge, find } from 'module';
+import something from 'another-module';
+```
+
+---
+
 #### 📍 no-restricted-imports
 
 Disallows importing lodash - people should import only the lodash sub-modules they need.
@@ -616,6 +655,7 @@ import flatten from 'lodash/flatten';
 ```
 
 ---
+
 
 ### Vue
 
@@ -1424,6 +1464,8 @@ foo(() => {
 });
 ```
 
+---
+
 #### 📍 no-lonely-if
 
 `@throws Warning`
@@ -1460,6 +1502,51 @@ if (condition) {
 } else {
     // ...
 }
+```
+
+---
+
+#### 📍 prefer-const
+
+`@throws Warning`
+
+If a variable is set using 'let' and then never updated a warning will be issued as 'const' is preferred in this instance.
+
+##### ❌ Example of incorrect code for this rule:
+
+```js
+let a = 3;
+console.log(a);
+
+let a;
+a = 1;
+return a;
+
+for (let i in [1, 2, 3]) {
+    console.log(i);
+}
+```
+
+##### ✅ Example of correct code for this rule:
+
+```js
+const a = 3;
+console.log(a);
+
+for (const i in [1, 2, 3]) {
+  console.log(i);
+}
+
+let a;
+a = 1;
+a = 2;
+return a;
+
+let a;
+if (true) {
+    a = 1;
+}
+
 ```
 
 ## Contributing

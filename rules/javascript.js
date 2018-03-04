@@ -54,6 +54,8 @@ module.exports = {
         'no-var': _THROW.ERROR,
         // Disallow alert() function in production, throw a warning in development
         'no-alert': Utils.isProduction() ? _THROW.ERROR : _THROW.WARNING,
+        // Disallow using the console in production, throw a warning in development
+        'no-console': Utils.isProduction() ? _THROW.ERROR : _THROW.WARNING,
         'dot-notation': _THROW.WARNING,
         // Discourage using confusing and sometimes unreadable JS tricks to do simple functions.
         'no-implicit-coercion': [_THROW.WARNING, {
@@ -89,6 +91,10 @@ module.exports = {
         'no-cond-assign': _THROW.WARNING,
         // Forces use of ES6 arrow function expressions
         'prefer-arrow-callback': _THROW.ERROR,
+        // Flags variables that are defined using 'let' but then never reassigned
+        'prefer-const': _THROW.WARNING,
+        // Disallow duplicate imports
+        'no-duplicate-imports': _THROW.WARNING,
         // Disallows importing lodash
         'no-restricted-imports': ['error', 'lodash'],
     },
