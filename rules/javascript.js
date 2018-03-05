@@ -95,5 +95,7 @@ module.exports = {
         'prefer-const': _THROW.WARNING,
         // Disallow duplicate imports
         'no-duplicate-imports': _THROW.WARNING,
+        // Disallows importing lodash
+        'no-restricted-imports': ['error', 'lodash'],
     },
 }

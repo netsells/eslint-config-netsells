@@ -638,6 +638,25 @@ import something from 'another-module';
 
 ---
 
+#### 📍 no-restricted-imports
+
+Disallows importing lodash - people should import only the lodash sub-modules they need.
+
+##### ❌ Example of incorrect code for this rule:
+
+```js
+import _ from 'lodash';
+```
+
+##### ✅ Example of correct code for this rule:
+
+```js
+import flatten from 'lodash/flatten';
+```
+
+---
+
+
 ### Vue
 
 ---
