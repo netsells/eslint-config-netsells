@@ -1,3 +1,5 @@
+![Netsells Logo](https://www.dropbox.com/s/4jmsg7xvcfnyfbk/logo_name_300.png?raw=1)
+
 # Netsells Eslint Config
 
 This repository contains the defacto-standard eslint configuration used on all Netsells projects, both internally and client.
