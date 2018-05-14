@@ -45,7 +45,7 @@ module.exports = {
         // Enforce the shorthand v-bind: syntax (:)
         'vue/v-bind-style': [_THROW.ERROR, 'shorthand'],
         // Remove multiple spaces in a row between attributes which are not used for indentation
-        'vue/no-multi-spaces': [_THROW.ERROR, 'shorthand'],
+        'vue/no-multi-spaces': [_THROW.ERROR],
         // Force kebab-case component names
         'vue/name-property-casing': [_THROW.ERROR, 'kebab-case'],
         // Expect one space between expression and curly brackets.
@@ -58,11 +58,11 @@ module.exports = {
             multiline: 1,
         }],
         // This rule requires default value to be set for each props that are not marked as required.
-        'vue/require-default-prop': [_THROW.WARNING, true],
+        'vue/require-default-prop': [_THROW.WARNING],
         // In committed code, prop definitions should always be as detailed as possible, specifying at least type(s).
-        'vue/require-prop-types': [_THROW.WARNING, true],
+        'vue/require-prop-types': [_THROW.WARNING],
         // It is considered a very bad practice to introduce side effects inside computed properties. It makes the code unpredictable and hard to understand.
-        'vue/no-side-effects-in-computed-properties': [_THROW.WARNING, true],
+        'vue/no-side-effects-in-computed-properties': [_THROW.WARNING],
         // When duplicate arguments exist, only the last one is valid
         'vue/no-duplicate-attributes': [_THROW.ERROR],
         // Enforce that a return statement is present in computed property
