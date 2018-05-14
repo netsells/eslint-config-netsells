@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-netsells",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Eslint config for the Netsells organisation",
   "main": "index.js",
   "scripts": {
@@ -12,7 +12,7 @@
   "dependencies": {
     "eslint": "^4.10.0",
     "eslint-plugin-require-jsdoc-except": "^1.1.0",
-    "eslint-plugin-vue": "^3.13.1"
+    "eslint-plugin-vue": "^4.5.0"
   },
   "devDependencies": {
     "husky": "^0.15.0-rc.8"

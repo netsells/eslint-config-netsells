@@ -28,7 +28,7 @@ module.exports = {
                 'render',
                 'renderError',
             ],
-        ],
+        }],
         // Enforce 4 space continuous indentation
         'vue/html-indent': [_THROW.ERROR, 4, {
             attribute: 1,
