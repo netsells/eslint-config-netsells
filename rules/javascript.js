@@ -25,8 +25,8 @@ module.exports = {
                 ArrowFunctionExpression: true,
                 FunctionExpression: true,
             },
-            // Ignore all the standard VueJS lifecycle methods
             ignore: [
+                // Ignore all the standard VueJS lifecycle methods
                 'beforeCreate',
                 'created',
                 'beforeMount',
@@ -36,6 +36,9 @@ module.exports = {
                 'beforeUpdate',
                 'updated',
                 'data',
+
+                // Ignore the vue default prop method
+                'default',
             ],
         }],
         // Require jsdoc data to be consistently valid
