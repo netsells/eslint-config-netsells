@@ -15,7 +15,7 @@ module.exports = {
         // Require a space before function parenthesis 
         'space-before-function-paren': [_THROW.WARNING, 'never'],
         // Requires trailing commas when the last element or property is in a different line than the closing ] or } and disallows trailing commas when the last element or property is on the same line as the closing ] or }
-        'comma-dangle': [_THROW.ERROR, 'always-multiline'],
+        'comma-dangle': [_THROW.WARNING, 'always-multiline'],
         // Require JSDoc on all functions and classes
         'require-jsdoc-except/require-jsdoc': [_THROW.WARNING, {
             require: {
