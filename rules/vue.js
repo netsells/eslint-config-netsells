@@ -30,7 +30,7 @@ module.exports = {
             ],
         }],
         // Enforce 4 space continuous indentation
-        'vue/html-indent': [_THROW.ERROR, 4, {
+        'vue/html-indent': [_THROW.WARNING, 4, {
             attribute: 1,
             closeBracket: 0,
         }],
