@@ -1551,6 +1551,28 @@ if (true) {
 
 ```
 
+---
+
+#### 📍 quotes
+
+`@throws Warning`
+
+Limits the use of string quotes within JavaScript to 'single' quotation marks.
+
+##### ❌ Example of incorrect code for this rule:
+
+```js
+const double = "double";
+const escaped = "a string with escaped 'single' quotes"
+```
+
+##### ✅ Example of correct code for this rule:
+
+```js
+const single = 'single';
+const backtick = `back${x}tick`;
+```
+
 ## Contributing
 
 If you disagree with any rules in this linter, or feel additional rules should be added, please open an issue on this project to initiate an open dialogue with all team members. Please bear in mind this is a public repository.

@@ -100,5 +100,7 @@ module.exports = {
         'no-duplicate-imports': _THROW.WARNING,
         // Disallows importing lodash
         'no-restricted-imports': ['error', 'lodash'],
+        // Enforce the use of single quotes when using JavaScript
+        'quotes': ['warning', 'single'],
     },
 }
