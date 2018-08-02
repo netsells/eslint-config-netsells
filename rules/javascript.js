@@ -102,5 +102,7 @@ module.exports = {
         'no-restricted-imports': ['error', 'lodash'],
         // Enforces spacing around the colon in object literal properties
         'key-spacing': _THROW.WARNING,
+        // Enforce the use of single quotes when using JavaScript
+        'quotes': [_THROW.WARNING, 'single'],
     },
 }

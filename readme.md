@@ -1563,9 +1563,9 @@ Enforces a space after the colon in object literals.
 
 ```js
 const object = {
- 'key':'value',
- 'key' :'value',   
- 'key' : 'value',   
+    key:'value',
+    key :'value',   
+    key : 'value',   
 };
 ```
 
@@ -1573,8 +1573,30 @@ const object = {
 
 ```js
 const object = {
- 'key': 'value',
+    key: 'value',
 };
+```
+
+---
+
+#### 📍 quotes
+
+`@throws Warning`
+
+Limits the use of string quotes within JavaScript to 'single' quotation marks.
+
+##### ❌ Example of incorrect code for this rule:
+
+```js
+const double = "double";
+const escaped = "a string with escaped 'single' quotes"
+```
+
+##### ✅ Example of correct code for this rule:
+
+```js
+const single = 'single';
+const backtick = `back${x}tick`;
 ```
 
 ## Contributing
