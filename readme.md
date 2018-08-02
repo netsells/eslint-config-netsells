@@ -1553,6 +1553,32 @@ if (true) {
 
 ---
 
+#### 📍 key-spacing
+
+`@throws Warning`
+
+Enforces a space after the colon in object literals.
+
+##### ❌ Example of incorrect code for this rule:
+
+```js
+const object = {
+    key:'value',
+    key :'value',   
+    key : 'value',   
+};
+```
+
+##### ✅ Example of correct code for this rule:
+
+```js
+const object = {
+    key: 'value',
+};
+```
+
+---
+
 #### 📍 quotes
 
 `@throws Warning`
