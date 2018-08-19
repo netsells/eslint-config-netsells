@@ -16,7 +16,7 @@ Extend the config in your project. For example, a `.eslintrc` file in your proje
 
 ```json
 {
-  "extends": "netsells"
+  "extends": "@netsells"
 }
 ```
 
