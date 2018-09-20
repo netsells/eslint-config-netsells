@@ -104,5 +104,7 @@ module.exports = {
         'key-spacing': _THROW.WARNING,
         // Enforce the use of single quotes when using JavaScript
         'quotes': [_THROW.WARNING, 'single'],
+        // Reports the use of redundant return statements
+        'no-useless-return': _THROW.WARNING,
     },
 }

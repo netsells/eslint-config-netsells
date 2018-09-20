@@ -1599,6 +1599,35 @@ const single = 'single';
 const backtick = `back${x}tick`;
 ```
 
+---
+
+#### 📍 no-useless-return
+
+`@throws Warning`
+
+Reports the use of redundant return statements
+
+##### ❌ Example of incorrect code for this rule:
+
+```js
+function foo() { return; }
+
+function foo() {
+    doSomething();
+    return;
+}
+```
+
+##### ✅ Example of correct code for this rule:
+
+```js
+function foo() { return 5; }
+
+function foo() {
+    return doSomething();
+}
+```
+
 ## Contributing
 
 If you disagree with any rules in this linter, or feel additional rules should be added, please open an issue on this project to initiate an open dialogue with all team members. Please bear in mind this is a public repository.
