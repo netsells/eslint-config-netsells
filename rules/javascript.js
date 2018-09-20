@@ -105,6 +105,6 @@ module.exports = {
         // Enforce the use of single quotes when using JavaScript
         'quotes': [_THROW.WARNING, 'single'],
         // Enforces the use of spacing within curly braces
-        'template-curly-spacing': [_THROW.WARNING, 'always']
+        'template-curly-spacing': [_THROW.WARNING, 'always'],
     },
 }
