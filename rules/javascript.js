@@ -105,6 +105,6 @@ module.exports = {
         // Enforce the use of single quotes when using JavaScript
         'quotes': [_THROW.WARNING, 'single'],
         // Prevents use of an identifier that has not yet been declared
-        'no-use-before-define': [_THROW.ERROR],
+        'no-use-before-define': _THROW.ERROR,
     },
 }
