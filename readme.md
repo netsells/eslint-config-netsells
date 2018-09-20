@@ -1605,7 +1605,7 @@ const backtick = `back${x}tick`;
 
 `@throws Warning`
 
-Prevents the use of moustaches within textarea form fields.
+Prevents the use of mustaches within textarea form fields.
 
 ##### ❌ Example of incorrect code for this rule:
 
