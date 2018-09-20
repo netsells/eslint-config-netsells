@@ -1599,6 +1599,40 @@ const single = 'single';
 const backtick = `back${x}tick`;
 ```
 
+---
+
+#### 📍 no-multiple-empty-lines
+
+`@throws Warning`
+
+Prevents multiple empty lines existing within code. With rules set to a max of 1 in general and both at the beginning and the end of the file.
+
+##### ❌ Example of incorrect code for this rule:
+
+```js
+
+
+const foo = bar;
+
+
+
+const bar = foo;
+
+
+
+
+```
+
+##### ✅ Example of correct code for this rule:
+
+```js
+
+const foo = bar;
+
+const bar = foo;
+
+```
+
 ## Contributing
 
 If you disagree with any rules in this linter, or feel additional rules should be added, please open an issue on this project to initiate an open dialogue with all team members. Please bear in mind this is a public repository.

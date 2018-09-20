@@ -104,5 +104,11 @@ module.exports = {
         'key-spacing': _THROW.WARNING,
         // Enforce the use of single quotes when using JavaScript
         'quotes': [_THROW.WARNING, 'single'],
+        // Restricts the number of allowed empty lines
+        'no-multiple-empty-lines': [_THROW.WARNING, {
+            max: 1,
+            maxEOF: 1,
+            maxBOF: 1,
+        }],
     },
 }
