@@ -105,6 +105,6 @@ module.exports = {
         // Enforce the use of single quotes when using JavaScript
         'quotes': [_THROW.WARNING, 'single'],
         // Disallows ternary operators when simpler alternatives exist
-        'no-unneeded-ternary': [_THROW.WARNING],
+        'no-unneeded-ternary': _THROW.WARNING,
     },
 }
