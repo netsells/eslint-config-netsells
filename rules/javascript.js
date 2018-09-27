@@ -45,7 +45,7 @@ module.exports = {
         'valid-jsdoc': [_THROW.WARNING, {
             requireParamDescription: false,
             requireReturnDescription: false,
-            matchDescription: ".+",
+            matchDescription: '.+',
             requireReturn: false,
         }],
         // Requires spacing before and after arrow functions arrow
