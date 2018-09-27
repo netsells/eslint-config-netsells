@@ -14,5 +14,6 @@ module.exports = {
     },
     plugins: [
         'require-jsdoc-except',
+        'jsx-a11y',
     ],
 };

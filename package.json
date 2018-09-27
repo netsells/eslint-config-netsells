@@ -15,6 +15,7 @@
     "eslint-plugin-vue": "^4.5.0"
   },
   "devDependencies": {
+    "eslint-plugin-jsx-a11y": "^6.1.1",
     "husky": "^0.15.0-rc.8"
   },
   "husky": {

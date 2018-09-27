@@ -1,5 +1,8 @@
 {
-  "extends": "./index.js",
+  "extends": [
+    "./index.js",
+    "plugin:jsx-a11y/recommended",
+  ],
   "rules": {
     "vue/no-unused-vars": [0]
   }
