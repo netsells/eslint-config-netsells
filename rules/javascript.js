@@ -104,5 +104,7 @@ module.exports = {
         'key-spacing': _THROW.WARNING,
         // Enforce the use of single quotes when using JavaScript
         'quotes': [_THROW.WARNING, 'single'],
+        // Disallows array literals with empty slots
+        'no-sparse-arrays': _THROW.WARNING,
     },
 }
