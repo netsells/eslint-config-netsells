@@ -1622,6 +1622,31 @@ const array = [ 'red', 'green' ];
 const array = new Array(23);
 ```
 
+---
+
+#### 📍 debugger
+
+`@throws Warning`
+
+Disallows Debugger statements
+
+##### ❌ Example of incorrect code for this rule:
+
+```js
+function isTruthy(x) {
+    debugger;
+    return Boolean(x);
+}
+```
+
+##### ✅ Example of correct code for this rule:
+
+```js
+function isTruthy(x) {
+    return Boolean(x); // set a breakpoint at this line
+}
+```
+
 ## Contributing
 
 If you disagree with any rules in this linter, or feel additional rules should be added, please open an issue on this project to initiate an open dialogue with all team members. Please bear in mind this is a public repository.
