@@ -106,5 +106,7 @@ module.exports = {
         'quotes': [_THROW.WARNING, 'single'],
         // Disallows array literals with empty slots
         'no-sparse-arrays': _THROW.WARNING,
+        // Disallows debugger statements
+        'no-debugger': _THROW.WARNING,
     },
 }
