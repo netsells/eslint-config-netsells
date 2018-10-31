@@ -1619,18 +1619,238 @@ const foo = bar;
 const bar = foo;
 
 
-
-
 ```
 
 ##### ✅ Example of correct code for this rule:
 
 ```js
-
 const foo = bar;
 
 const bar = foo;
+```
 
+---
+
+#### 📍 no-useless-return
+
+`@throws Warning`
+
+Reports the use of redundant return statements
+
+##### ❌ Example of incorrect code for this rule:
+
+```js
+function foo() { return; }
+
+function foo() {
+    doSomething();
+    return;
+}
+```
+
+##### ✅ Example of correct code for this rule:
+
+```js
+function foo() { return 5; }
+
+function foo() {
+    return doSomething();
+}
+```
+
+---
+
+#### 📍 no-use-before-define
+
+`@throws Error`
+
+Prevents use of an identifier that has not yet been declared
+
+##### ❌ Example of incorrect code for this rule:
+
+```js
+alert(a);
+const a = 10;
+
+f();
+function f() {};
+
+function g() {
+    return b;
+}
+const b = 1;
+```
+
+##### ✅ Example of correct code for this rule:
+
+```js
+const a = 10;
+alert(a);
+
+function f() {};
+f();
+
+const b = 1;
+function g() {
+    return b;
+}
+```
+
+---
+
+#### 📍 no-unneeded-ternary
+
+`@throws Warning`
+
+Disallows the use of ternary operators when simpler alternatives exist
+
+##### ❌ Example of incorrect code for this rule:
+
+```js
+const a = x === 2 ? true : false;
+const b = x ? true : false;
+```
+
+##### ✅ Example of correct code for this rule:
+
+```js
+const a = x === 2 ? 'yes' : 'No';
+const a = x !== false;
+const a = x ? 'Yes' : 'No';
+```
+
+---
+
+#### 📍 semi
+
+`@throws Warning`
+
+Requires a semi-colon at the end of every line
+
+##### ❌ Example of incorrect code for this rule:
+
+```js
+const foo = 'bar'
+```
+
+##### ✅ Example of correct code for this rule:
+
+```js
+const foo = 'bar';
+```
+
+---
+
+#### 📍 eol-last
+
+`@throws Error`
+
+Forces a new line at the end of files.
+
+##### ❌ Example of incorrect code for this rule:
+
+```js
+module.exports = FooBar;
+```
+
+##### ✅ Example of correct code for this rule:
+
+```js
+module.exports = FooBar;\n
+```
+
+---
+
+#### 📍 no-textarea-mustache
+
+`@throws Warning`
+
+Prevents the use of mustaches within textarea form fields.
+
+
+##### ❌ Example of incorrect code for this rule:
+
+```js
+<textarea>{{ message }}</textarea>
+```
+
+##### ✅ Example of correct code for this rule:
+
+```js
+<textarea v-model="message" />
+```
+
+---
+
+#### 📍 template-curly-spacing
+
+`@throws Warning`
+
+Enforces the use of spacing within template strings.
+
+##### ❌ Example of incorrect code for this rule:
+
+```js
+`hello, ${people.name}`;
+`hello, ${ people.name}`;
+`hello, ${people.name }`;
+```
+
+##### ✅ Example of correct code for this rule:
+
+```js
+`hello, ${ people.name }`;
+`hello, ${
+    people.name
+}`;
+```
+
+---
+
+#### 📍 quotes
+
+`@throws Warning`
+
+Disallows array literals which contain empty slots.
+
+##### ❌ Example of incorrect code for this rule:
+
+```js
+const array = [ , , ];
+const array = [ 'red', , 'green'];
+```
+
+##### ✅ Example of correct code for this rule:
+
+```js
+const array = [];
+const array = [ 'red', 'green' ];
+const array = new Array(23);
+```
+
+---
+
+#### 📍 debugger
+
+`@throws Warning`
+
+Disallows Debugger statements
+
+##### ❌ Example of incorrect code for this rule:
+
+```js
+function isTruthy(x) {
+    debugger;
+    return Boolean(x);
+}
+```
+
+##### ✅ Example of correct code for this rule:
+
+```js
+function isTruthy(x) {
+    return Boolean(x); // set a breakpoint at this line
+}
 ```
 
 ## Contributing
