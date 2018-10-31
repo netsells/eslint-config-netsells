@@ -106,5 +106,9 @@ module.exports = {
         'quotes': [_THROW.WARNING, 'single'],
         // Enforces the use of spacing within curly braces
         'template-curly-spacing': [_THROW.WARNING, 'always'],
+        // Disallows array literals with empty slots
+        'no-sparse-arrays': _THROW.WARNING,
+        // Disallows debugger statements
+        'no-debugger': _THROW.WARNING,
     },
 }

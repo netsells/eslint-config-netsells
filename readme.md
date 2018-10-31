@@ -1624,6 +1624,54 @@ Enforces the use of spacing within template strings.
 }`;
 ```
 
+---
+
+#### 📍 quotes
+
+`@throws Warning`
+
+Disallows array literals which contain empty slots.
+
+##### ❌ Example of incorrect code for this rule:
+
+```js
+const array = [ , , ];
+const array = [ 'red', , 'green'];
+```
+
+##### ✅ Example of correct code for this rule:
+
+```js
+const array = [];
+const array = [ 'red', 'green' ];
+const array = new Array(23);
+```
+
+---
+
+#### 📍 debugger
+
+`@throws Warning`
+
+Disallows Debugger statements
+
+##### ❌ Example of incorrect code for this rule:
+
+```js
+function isTruthy(x) {
+    debugger;
+    return Boolean(x);
+}
+```
+
+##### ✅ Example of correct code for this rule:
+
+```js
+function isTruthy(x) {
+    return Boolean(x); // set a breakpoint at this line
+}
+```
+
 
 ## Contributing
 
