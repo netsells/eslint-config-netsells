@@ -1601,6 +1601,26 @@ const backtick = `back${x}tick`;
 
 ---
 
+#### 📍 semi
+
+`@throws Warning`
+
+Requires a semi-colon at the end of every line
+
+##### ❌ Example of incorrect code for this rule:
+
+```js
+const foo = 'bar'
+```
+
+##### ✅ Example of correct code for this rule:
+
+```js
+const foo = 'bar';
+```
+
+---
+
 #### 📍 eol-last
 
 `@throws Error`
