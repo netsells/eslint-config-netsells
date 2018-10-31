@@ -1601,6 +1601,31 @@ const backtick = `back${x}tick`;
 
 ---
 
+#### 📍 template-curly-spacing
+
+`@throws Warning`
+
+Enforces the use of spacing within template strings.
+
+##### ❌ Example of incorrect code for this rule:
+
+```js
+`hello, ${people.name}`;
+`hello, ${ people.name}`;
+`hello, ${people.name }`;
+```
+
+##### ✅ Example of correct code for this rule:
+
+```js
+`hello, ${ people.name }`;
+`hello, ${
+    people.name
+}`;
+```
+
+---
+
 #### 📍 quotes
 
 `@throws Warning`
@@ -1646,6 +1671,7 @@ function isTruthy(x) {
     return Boolean(x); // set a breakpoint at this line
 }
 ```
+
 
 ## Contributing
 
