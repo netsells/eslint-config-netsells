@@ -1601,6 +1601,29 @@ const backtick = `back${x}tick`;
 
 ---
 
+#### 📍 no-unneeded-ternary
+
+`@throws Warning`
+
+Disallows the use of ternary operators when simpler alternatives exist
+
+##### ❌ Example of incorrect code for this rule:
+
+```js
+const a = x === 2 ? true : false;
+const b = x ? true : false;
+```
+
+##### ✅ Example of correct code for this rule:
+
+```js
+const a = x === 2 ? 'yes' : 'No';
+const a = x !== false;
+const a = x ? 'Yes' : 'No';
+```
+
+---
+
 #### 📍 semi
 
 `@throws Warning`

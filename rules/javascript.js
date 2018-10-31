@@ -92,7 +92,7 @@ module.exports = {
         'curly': _THROW.WARNING,
         // Encourage using template literals instead of '+' operator on strings
         'prefer-template': _THROW.WARNING,
-        //  discourage if statements as the only statement in else blocks
+        // discourage if statements as the only statement in else blocks
         'no-lonely-if': _THROW.WARNING,
         // Discourage conditional assignment of variables
         'no-cond-assign': _THROW.WARNING,
@@ -108,6 +108,8 @@ module.exports = {
         'key-spacing': _THROW.WARNING,
         // Enforce the use of single quotes when using JavaScript
         'quotes': [_THROW.WARNING, 'single'],
+        // Disallows ternary operators when simpler alternatives exist
+        'no-unneeded-ternary': _THROW.WARNING,
         // Enforces the use of spacing within curly braces
         'template-curly-spacing': [_THROW.WARNING, 'always'],
         // Disallows array literals with empty slots
