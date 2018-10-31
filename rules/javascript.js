@@ -127,4 +127,4 @@ module.exports = {
         // Disallows debugger statements
         'no-debugger': _THROW.WARNING,
     },
-}
+};

@@ -76,4 +76,4 @@ module.exports = {
         // Disallows the use of mustaches within textareas
         'vue/no-textarea-mustache': [_THROW.WARNING],
     },
-}
+};
