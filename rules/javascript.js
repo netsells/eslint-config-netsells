@@ -108,6 +108,12 @@ module.exports = {
         'key-spacing': _THROW.WARNING,
         // Enforce the use of single quotes when using JavaScript
         'quotes': [_THROW.WARNING, 'single'],
+        // Restricts the number of allowed empty lines
+        'no-multiple-empty-lines': [_THROW.WARNING, {
+            max: 1,
+            maxEOF: 1,
+            maxBOF: 1,
+        }],
         // Reports the use of redundant return statements
         'no-useless-return': _THROW.WARNING,
         // Prevents use of an identifier that has not yet been declared

@@ -1601,6 +1601,36 @@ const backtick = `back${x}tick`;
 
 ---
 
+#### 📍 no-multiple-empty-lines
+
+`@throws Warning`
+
+Prevents multiple empty lines existing within code. With rules set to a max of 1 in general and both at the beginning and the end of the file.
+
+##### ❌ Example of incorrect code for this rule:
+
+```js
+
+
+const foo = bar;
+
+
+
+const bar = foo;
+
+
+```
+
+##### ✅ Example of correct code for this rule:
+
+```js
+const foo = bar;
+
+const bar = foo;
+```
+
+---
+
 #### 📍 no-useless-return
 
 `@throws Warning`
