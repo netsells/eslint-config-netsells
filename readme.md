@@ -1616,7 +1616,122 @@ const foo = 'bar'
 ##### ✅ Example of correct code for this rule:
 
 ```js
-const for = 'bar';
+const foo = 'bar';
+```
+
+---
+
+#### 📍 eol-last
+
+`@throws Error`
+
+Forces a new line at the end of files.
+
+
+##### ❌ Example of incorrect code for this rule:
+
+```js
+module.exports = FooBar;
+```
+
+##### ✅ Example of correct code for this rule:
+
+```js
+module.exports = FooBar;\n
+```
+
+---
+
+#### 📍 no-textarea-mustache
+
+`@throws Warning`
+
+Prevents the use of mustaches within textarea form fields.
+
+
+##### ❌ Example of incorrect code for this rule:
+
+```js
+<textarea>{{ message }}</textarea>
+```
+
+##### ✅ Example of correct code for this rule:
+
+```js
+<textarea v-model="message" />
+```
+
+---
+
+#### 📍 template-curly-spacing
+
+`@throws Warning`
+
+Enforces the use of spacing within template strings.
+
+##### ❌ Example of incorrect code for this rule:
+
+```js
+`hello, ${people.name}`;
+`hello, ${ people.name}`;
+`hello, ${people.name }`;
+```
+
+##### ✅ Example of correct code for this rule:
+
+```js
+`hello, ${ people.name }`;
+`hello, ${
+    people.name
+}`;
+```
+
+---
+
+#### 📍 quotes
+
+`@throws Warning`
+
+Disallows array literals which contain empty slots.
+
+##### ❌ Example of incorrect code for this rule:
+
+```js
+const array = [ , , ];
+const array = [ 'red', , 'green'];
+```
+
+##### ✅ Example of correct code for this rule:
+
+```js
+const array = [];
+const array = [ 'red', 'green' ];
+const array = new Array(23);
+```
+
+---
+
+#### 📍 debugger
+
+`@throws Warning`
+
+Disallows Debugger statements
+
+##### ❌ Example of incorrect code for this rule:
+
+```js
+function isTruthy(x) {
+    debugger;
+    return Boolean(x);
+}
+```
+
+##### ✅ Example of correct code for this rule:
+
+```js
+function isTruthy(x) {
+    return Boolean(x); // set a breakpoint at this line
+}
 ```
 
 ## Contributing
