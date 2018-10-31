@@ -1601,6 +1601,27 @@ const backtick = `back${x}tick`;
 
 ---
 
+#### 📍 no-textarea-mustache
+
+`@throws Warning`
+
+Prevents the use of mustaches within textarea form fields.
+
+
+##### ❌ Example of incorrect code for this rule:
+
+```js
+<textarea>{{ message }}</textarea>
+```
+
+##### ✅ Example of correct code for this rule:
+
+```js
+<textarea v-model="message" />
+```
+
+---
+
 #### 📍 template-curly-spacing
 
 `@throws Warning`
@@ -1671,7 +1692,6 @@ function isTruthy(x) {
     return Boolean(x); // set a breakpoint at this line
 }
 ```
-
 
 ## Contributing
 
