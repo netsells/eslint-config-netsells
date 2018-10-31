@@ -1601,6 +1601,27 @@ const backtick = `back${x}tick`;
 
 ---
 
+#### 📍 eol-last
+
+`@throws Error`
+
+Forces a new line at the end of files.
+
+
+##### ❌ Example of incorrect code for this rule:
+
+```js
+module.exports = FooBar;
+```
+
+##### ✅ Example of correct code for this rule:
+
+```js
+module.exports = FooBar;\n
+```
+
+---
+
 #### 📍 no-textarea-mustache
 
 `@throws Warning`

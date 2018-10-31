@@ -80,6 +80,8 @@ module.exports = {
         'no-else-return': [_THROW.WARNING, {
             allowElseIf: false,
         }],
+        // Force new lines at end of files
+        'eol-last': [_THROW.ERROR, 'always'],
         // Discourage placing the dot on the property rather than the property
         'dot-location': [_THROW.WARNING, 'property'],
         // disallow floating decimals. Cause they're disgusting!
