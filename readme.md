@@ -1601,6 +1601,35 @@ const backtick = `back${x}tick`;
 
 ---
 
+#### 📍 no-useless-return
+
+`@throws Warning`
+
+Reports the use of redundant return statements
+
+##### ❌ Example of incorrect code for this rule:
+
+```js
+function foo() { return; }
+
+function foo() {
+    doSomething();
+    return;
+}
+```
+
+##### ✅ Example of correct code for this rule:
+
+```js
+function foo() { return 5; }
+
+function foo() {
+    return doSomething();
+}
+```
+
+---
+
 #### 📍 no-use-before-define
 
 `@throws Error`
