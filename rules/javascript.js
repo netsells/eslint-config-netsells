@@ -108,6 +108,8 @@ module.exports = {
         'key-spacing': _THROW.WARNING,
         // Enforce the use of single quotes when using JavaScript
         'quotes': [_THROW.WARNING, 'single'],
+        // Prevents use of an identifier that has not yet been declared
+        'no-use-before-define': _THROW.ERROR,
         // Disallows ternary operators when simpler alternatives exist
         'no-unneeded-ternary': _THROW.WARNING,
         // Enforces the use of spacing within curly braces

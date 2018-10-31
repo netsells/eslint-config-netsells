@@ -1601,6 +1601,44 @@ const backtick = `back${x}tick`;
 
 ---
 
+#### 📍 no-use-before-define
+
+`@throws Error`
+
+Prevents use of an identifier that has not yet been declared
+
+##### ❌ Example of incorrect code for this rule:
+
+```js
+alert(a);
+const a = 10;
+
+f();
+function f() {};
+
+function g() {
+    return b;
+}
+const b = 1;
+```
+
+##### ✅ Example of correct code for this rule:
+
+```js
+const a = 10;
+alert(a);
+
+function f() {};
+f();
+
+const b = 1;
+function g() {
+    return b;
+}
+```
+
+---
+
 #### 📍 no-unneeded-ternary
 
 `@throws Warning`
@@ -1649,7 +1687,6 @@ const foo = 'bar';
 `@throws Error`
 
 Forces a new line at the end of files.
-
 
 ##### ❌ Example of incorrect code for this rule:
 
