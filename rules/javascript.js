@@ -14,6 +14,8 @@ module.exports = {
         'no-empty-function': _THROW.WARNING,
         // Require a space before function parenthesis 
         'space-before-function-paren': [_THROW.WARNING, 'never'],
+        // Require a semi-colon at the end of every line
+        'semi': [_THROW.WARNING, 'always'],
         // Requires trailing commas when the last element or property is in a different line than the closing ] or } and disallows trailing commas when the last element or property is on the same line as the closing ] or }
         'comma-dangle': [_THROW.WARNING, 'always-multiline'],
         // Require JSDoc on all functions and classes
@@ -80,6 +82,8 @@ module.exports = {
         'no-else-return': [_THROW.WARNING, {
             allowElseIf: false,
         }],
+        // Force new lines at end of files
+        'eol-last': [_THROW.ERROR, 'always'],
         // Discourage placing the dot on the property rather than the property
         'dot-location': [_THROW.WARNING, 'property'],
         // disallow floating decimals. Cause they're disgusting!
@@ -106,5 +110,11 @@ module.exports = {
         'quotes': [_THROW.WARNING, 'single'],
         // Disallows ternary operators when simpler alternatives exist
         'no-unneeded-ternary': _THROW.WARNING,
+        // Enforces the use of spacing within curly braces
+        'template-curly-spacing': [_THROW.WARNING, 'always'],
+        // Disallows array literals with empty slots
+        'no-sparse-arrays': _THROW.WARNING,
+        // Disallows debugger statements
+        'no-debugger': _THROW.WARNING,
     },
 }
